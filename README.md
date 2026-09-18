@@ -1,0 +1,150 @@
+# Grounded 2 · Discord Rich Presence détaillée
+
+Affiche sur ton profil Discord ce que tu fais dans **Grounded 2** (version Xbox app / Game Pass) :
+
+```
+Joue à Grounded 2                                   [logo]  [icône de zone]
+Size Don't Matter · Jour 16
+📍 Avant-poste des rangers : snack · Nuit 🌙
+1:23:45 écoulées
+```
+
+- **Ligne 1** : nom du monde et jour en jeu.
+- **Ligne 2** : zone où tu te trouves (nom officiel, dans la langue du jeu — 118 zones connues) et moment de la journée (ou l'heure exacte).
+- **Info-bulle du logo** : heure en jeu précise et heure/type de la dernière sauvegarde.
+- **Petite icône** : surface / sous terre / avant-poste / installation.
+- Dans les menus : « Dans les menus · Dernière partie : … ».
+- Le chrono « écoulées » démarre au lancement du jeu ; la presence disparaît quand tu quittes.
+
+Aucune dépendance : Python standard uniquement. Rien n'est injecté dans le jeu, rien n'est lu en mémoire :
+l'outil lit les **sauvegardes** (que le jeu écrit toutes les 5 minutes en autosave, à chaque sauvegarde manuelle
+et à la déconnexion) et surveille le **processus** du jeu.
+
+## Prérequis
+
+- Windows 10/11, **Python 3.11+** (`python --version`).
+- Discord (client de bureau, Stable/PTB/Canary) lancé sur le même PC.
+- Grounded 2 installé via l'app Xbox / Game Pass (la version Steam est gérée en mode expérimental, voir plus bas).
+
+## Installation (5 minutes)
+
+### 1. Créer l'application Discord
+
+1. Va sur <https://discord.com/developers/applications> → **New Application**.
+2. Nomme-la exactement **`Grounded 2`** (c'est ce nom qui s'affiche après « Joue à »).
+3. Dans **General Information**, copie l'**Application ID**. Copie `config.example.json` en `config.json`
+   (ce fichier est ignoré par git) et colle l'ID dedans :
+   ```json
+   "client_id": "123456789012345678",
+   ```
+
+### 2. Envoyer les images
+
+Dans l'application : **Rich Presence → Art Assets → Add Image(s)**. Envoie les fichiers du dossier `assets/`
+en gardant **exactement** ces noms (clés) :
+
+| Fichier                  | Clé                | Rôle                                  |
+|--------------------------|--------------------|---------------------------------------|
+| `grounded2.png`          | `grounded2`        | grande image (key art du jeu)         |
+| `zone_surface.png`       | `zone_surface`     | petite icône : en surface             |
+| `zone_underground.png`   | `zone_underground` | petite icône : sous terre / fourmilière |
+| `zone_outpost.png`       | `zone_outpost`     | petite icône : avant-poste des rangers |
+| `zone_lab.png`           | `zone_lab`         | petite icône : installation / labo    |
+
+`grounded2_icon.png` (la fourmi) est une alternative pour la grande image : envoie-la sous la clé `grounded2_icon`
+et mets `"logo": "grounded2_icon"` dans `config.json`. Tu peux aussi mettre une URL `https://…` directe à la place
+d'une clé. Les images mettent parfois quelques minutes à apparaître côté Discord.
+
+### 3. Lancer
+
+Double-clique sur **`Grounded2RPC.bat`** (ou `python -m grounded2_rpc` dans le dossier). Laisse la fenêtre ouverte :
+elle affiche ce qui est envoyé à Discord. Lance ensuite le jeu (ou l'inverse, peu importe).
+
+Dans Discord, vérifie que **Paramètres → Activité → Confidentialité de l'activité → « Partager votre activité
+en cours »** est activé, sinon rien ne s'affiche.
+
+### 4. Démarrage automatique (optionnel)
+
+`Grounded2RPC-silencieux.vbs` lance l'outil sans fenêtre. Pour qu'il démarre avec Windows : `Win + R` →
+`shell:startup` → crée-y un raccourci vers ce `.vbs`. Les logs sont dans
+`%LOCALAPPDATA%\Grounded2RPC\grounded2_rpc.log`.
+
+## Configuration (`config.json`)
+
+| Clé                             | Défaut     | Description |
+|---------------------------------|------------|-------------|
+| `client_id`                     | `""`       | Application ID Discord (obligatoire). |
+| `language`                      | `"auto"`   | `auto` = langue des textes du jeu (`GameUserSettings.ini`), sinon `fr`, `en`… Les noms de zones existent en fr, en, de, es, es-MX, it, ja, ko, pt-BR, zh-Hans, zh-Hant ; les autres textes en fr et en. |
+| `poll_interval_seconds`         | `5`        | Fréquence de vérification du processus et des sauvegardes. |
+| `assume_in_world_after_minutes` | `2`        | Sans nouvelle sauvegarde depuis le lancement, considère que tu es en partie (dernière sauvegarde connue) après ce délai. `-1` pour rester sur « Dans les menus » jusqu'à la première sauvegarde. |
+| `show_world_name`               | `true`     | Afficher le nom du monde. |
+| `clock_mode`                    | `"period"` | `period` (Matin 🌅 / Journée ☀️ / Soir 🌇 / Nuit 🌙), `exact` (`02:43`), `both`, `none`. |
+| `show_background_state`         | `false`    | Ajoute « ⏸ En arrière-plan » quand la fenêtre du jeu n'a pas le focus. |
+| `party_from_header`             | `"off"`    | Affiche « 2 sur 4 » à partir d'un champ du header (`flag3` ou `slot`) — champ **non confirmé**, voir plus bas. |
+| `process_names`                 | …          | Exécutables surveillés (`Grounded2-WinGDK-Shipping.exe` pour Xbox). |
+| `steam_save_globs`              | …          | Motifs de fichiers `.sav` Steam (expérimental). |
+| `images`                        | …          | Clés d'images (ou URLs) : `logo`, `menu`, `zone_surface`, `zone_underground`, `zone_outpost`, `zone_lab`. |
+| `buttons`                       | `[]`       | Jusqu'à 2 boutons `{"label": "…", "url": "https://…"}` (visibles par les autres, pas par toi). |
+
+## Comment ça marche
+
+1. **Processus** : `Grounded2-WinGDK-Shipping.exe` est cherché toutes les 5 s ; son heure de lancement sert de chrono.
+2. **Sauvegardes** : la version Xbox stocke les sauvegardes dans
+   `%LOCALAPPDATA%\Packages\Microsoft.OE-Augusta_8wekyb3d8bbwe\SystemAppData\wgs\…` (format « wgs »).
+   Chaque sauvegarde contient un petit bloc `HeaderData` (~240 octets) que le jeu utilise pour le menu
+   « Charger » : version, identifiant du monde, type de sauvegarde, date, **jour/heure en jeu**, carte,
+   **zone du joueur** (`Outpost_Snackbar`, `Picnic_Area`…), nom du monde… Voir `grounded2_rpc/save_header.py`.
+3. **Zones** : `grounded2_rpc/data/zones.json` relie les 118 lignes de `Table_Zones` du jeu aux noms affichés
+   dans les 11 langues (extraits des fichiers du jeu avec `tools/extract_zones.py`).
+4. **État** :
+   - jeu fermé → presence effacée ;
+   - jeu lancé, aucune sauvegarde depuis le lancement → « Dans les menus » (puis « partie supposée » après
+     `assume_in_world_after_minutes`) ;
+   - une sauvegarde postérieure au lancement → « en partie » avec ses infos.
+5. Discord n'accepte qu'une mise à jour toutes les 15 s ; l'outil n'envoie que les changements.
+
+**Fraîcheur des infos** : la zone/le jour sont ceux de la **dernière sauvegarde** (autosave toutes les 5 min par
+défaut — réglable dans le jeu, plus une sauvegarde manuelle/rapide à tout moment). Ce n'est pas du temps réel, mais
+c'est fiable, sans risque pour le jeu et robuste aux mises à jour (le format du header n'a pas changé entre les
+versions 0.1.1 et 0.5.0 du jeu).
+
+## Champs encore incertains (tu peux aider à les confirmer)
+
+Le header contient 4 octets `flags` (observés `(1, 0, 1, 2)` puis `(1, 0, 1, 1)`) et une chaîne `session_mode`
+(`""` ou `"Solo"`). Le 4ᵉ octet est soit la **difficulté** (1 = Moyen, 2 = Impitoyable ?), soit le **nombre de
+joueurs** présents. Pour trancher :
+
+1. joue quelques minutes **en solo** sur une difficulté donnée, attends une autosave, puis
+   `python tools/dump_saves.py` ;
+2. refais la même chose **à deux**, ou en changeant la difficulté ;
+3. compare la colonne `flags` : si elle suit le nombre de joueurs, mets `"party_from_header": "flag3"`.
+
+## Version Steam (expérimental)
+
+Non testée. L'outil scanne `%LOCALAPPDATA%\Augusta\Saved\SaveGames\**\*.sav` et tente de lire le début de
+chaque fichier comme un header. Si ça ne marche pas, ouvre un `.sav` dans un éditeur hexadécimal : le header
+devrait apparaître quelque part au début du fichier (chaîne `Augusta_Main` puis `/Game/Blueprints/Table_Zones`) —
+adapte `saves.py` en conséquence. Ajoute aussi le vrai nom de l'exécutable Steam dans `process_names`.
+
+## Dépannage
+
+- **`client_id manquant`** : remplis `config.json` (voir Installation, étape 1).
+- **`handshake refusé par Discord : Invalid Client ID`** : l'ID est faux ou incomplet.
+- **`Discord n'est pas joignable`** : Discord n'est pas lancé (ou tourne en administrateur alors que l'outil non,
+  ou l'inverse) ; l'outil réessaie toutes les 20 s.
+- **Rien ne s'affiche** : vérifie le paramètre de confidentialité d'activité Discord ; ferme le jeu et relance-le
+  si Discord affichait déjà « Grounded 2 » via sa propre détection.
+- **Mauvaise langue** : `"language": "fr"` dans `config.json` (le mode `auto` suit la langue des textes du jeu).
+- **Images absentes** : les clés dans `config.json` doivent être identiques à celles des Art Assets.
+- **Zone affichée comme `Nouvelle Zone`** (nom brut) : nouvelle zone ajoutée par une mise à jour → lance
+  `python tools/extract_zones.py --game "E:\XboxGames\Grounded 2"` pour régénérer `zones.json`.
+
+## Outils et tests
+
+- `python -m grounded2_rpc --dump` : liste des sauvegardes décodées.
+- `python -m grounded2_rpc --dry-run --once [--simulate]` : affiche l'activité calculée sans rien envoyer
+  (`--simulate` fait comme si le jeu tournait).
+- `python -m grounded2_rpc --simulate` : envoie une presence réelle à Discord sans lancer le jeu (test visuel).
+- `python tools/dump_saves.py [--json]` : tous les champs du header, y compris ceux non affichés.
+- `python tools/extract_zones.py` : régénère `grounded2_rpc/data/zones.json` depuis les fichiers du jeu.
+- `python -m unittest discover -s tests` : tests unitaires.

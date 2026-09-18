@@ -1,0 +1,2014 @@
+{
+ "_meta": {
+  "source": "Table_Zones.uasset + Exported/Release_*/Localized/*/Text (jeu dans E:\\XboxGames\\Grounded 2)",
+  "generator": "tools/extract_zones.py"
+ },
+ "zones": {
+  "Abyss_Area": {
+   "area_id": 61,
+   "kind": "underground",
+   "names": {
+    "de": "Der Abgrund",
+    "en": "The Abyss",
+    "es": "El abismo",
+    "es-MX": "El Abismo",
+    "fr": "L’Abîme",
+    "it": "Gli abissi",
+    "ja": "深淵",
+    "ko": "심연",
+    "pt-BR": "O Abismo",
+    "zh-Hans": "深渊",
+    "zh-Hant": "深淵"
+   }
+  },
+  "Abyss_Area_Descent": {
+   "area_id": 61,
+   "kind": "underground",
+   "names": {
+    "de": "Der Abgrund",
+    "en": "The Abyss",
+    "es": "El abismo",
+    "es-MX": "El Abismo",
+    "fr": "L’Abîme",
+    "it": "Gli abissi",
+    "ja": "深淵",
+    "ko": "심연",
+    "pt-BR": "O Abismo",
+    "zh-Hans": "深渊",
+    "zh-Hant": "深淵"
+   }
+  },
+  "Abyss_Chamber_Algae": {
+   "area_id": 69,
+   "kind": "underground",
+   "names": {
+    "de": "Algenkammer",
+    "en": "Algae Chamber",
+    "es": "Cámara de algas",
+    "es-MX": "Cámara de Algas",
+    "fr": "Salle des algues",
+    "it": "Camera algale",
+    "ja": "海藻域イキ",
+    "ko": "조류 방",
+    "pt-BR": "Câmara de Algas",
+    "zh-Hans": "藻类室",
+    "zh-Hant": "藻類洞室"
+   }
+  },
+  "Abyss_Chamber_Monitoring": {
+   "area_id": 68,
+   "kind": "underground",
+   "names": {
+    "de": "Überwachungsstation-Bereich",
+    "en": "Monitoring Station Area",
+    "es": "Zona de la estación de monitorización",
+    "es-MX": "Área de la Estación de Monitoreo",
+    "fr": "Zone de la station de surveillance",
+    "it": "Area Stazione di monitoraggio",
+    "ja": "監視ステーションエリア",
+    "ko": "감시국 지역",
+    "pt-BR": "Área da Estação de Monitoramento",
+    "zh-Hans": "监控站区域",
+    "zh-Hant": "監控站區"
+   }
+  },
+  "Abyss_Chamber_Rocky": {
+   "area_id": 70,
+   "kind": "underground",
+   "names": {
+    "de": "Felsenkammer",
+    "en": "Rocky Chamber",
+    "es": "Cámara rocosa",
+    "es-MX": "Cámara de Rocas",
+    "fr": "Salle rocailleuse",
+    "it": "Camera rocciosa",
+    "ja": "険しい岩場",
+    "ko": "바위 방",
+    "pt-BR": "Câmara Rochosa",
+    "zh-Hans": "岩石室",
+    "zh-Hant": "岩石洞室"
+   }
+  },
+  "Abyss_Facility": {
+   "area_id": 62,
+   "kind": "underground",
+   "names": {
+    "de": "Überwachungsstation",
+    "en": "Monitoring Station",
+    "es": "Estación de monitorización",
+    "es-MX": "Estación de Monitoreo",
+    "fr": "Station de surveillance",
+    "it": "Stazione di monitoraggio",
+    "ja": "監視ステーション",
+    "ko": "감시국",
+    "pt-BR": "Estação de Monitoramento",
+    "zh-Hans": "监控站",
+    "zh-Hant": "監控站"
+   }
+  },
+  "Abyss_Facility_Abyss_Music": {
+   "area_id": 62,
+   "kind": "underground",
+   "names": {
+    "de": "Überwachungsstation",
+    "en": "Monitoring Station",
+    "es": "Estación de monitorización",
+    "es-MX": "Estación de Monitoreo",
+    "fr": "Station de surveillance",
+    "it": "Stazione di monitoraggio",
+    "ja": "監視ステーション",
+    "ko": "감시국",
+    "pt-BR": "Estação de Monitoramento",
+    "zh-Hans": "监控站",
+    "zh-Hant": "監控站"
+   }
+  },
+  "Abyss_Galleries": {
+   "area_id": 71,
+   "kind": "underground",
+   "names": {
+    "de": "Abgrund-Galerien",
+    "en": "Abyssal Galleries",
+    "es": "Galerías abisales",
+    "es-MX": "Galerías Abisales",
+    "fr": "Galeries abyssales",
+    "it": "Cunicoli abissali",
+    "ja": "深淵回廊カイロウ",
+    "ko": "심연 갤러리",
+    "pt-BR": "Galerias Abissais",
+    "zh-Hans": "深渊展厅",
+    "zh-Hant": "深淵長廊"
+   }
+  },
+  "Abyss_Touchdown": {
+   "area_id": 72,
+   "kind": "underground",
+   "names": {
+    "de": "Landezone",
+    "en": "Touchdown Zone",
+    "es": "Zona de aterrizaje",
+    "es-MX": "Zona de Contacto",
+    "fr": "Zone d’arrivée",
+    "it": "Zona di contatto",
+    "ja": "タッチダウンゾーン",
+    "ko": "수중 착지 구역",
+    "pt-BR": "Zona de Aterrissagem",
+    "zh-Hans": "登陆场地带",
+    "zh-Hant": "著陸區"
+   }
+  },
+  "Anthill_Cave": {
+   "area_id": 27,
+   "kind": "underground",
+   "names": {
+    "de": "Ameisenhöhle",
+    "en": "Ant Cave",
+    "es": "Cueva de hormigas",
+    "es-MX": "Cueva de hormigas",
+    "fr": "Grotte aux fourmis",
+    "it": "Grotta delle formiche",
+    "ja": "アリの洞窟",
+    "ko": "개미 동굴",
+    "pt-BR": "Caverna das Formigas",
+    "zh-Hans": "蚂蚁洞",
+    "zh-Hant": "螞蟻洞穴"
+   }
+  },
+  "Anthill_Hatchery_B1": {
+   "area_id": 25,
+   "kind": "underground",
+   "names": {
+    "de": "Brutplatz-Ameisenhügel",
+    "en": "Hatchery Anthill",
+    "es": "Hormiguero del criadero",
+    "es-MX": "Hormiguero del criadero",
+    "fr": "Fourmilière du couvoir",
+    "it": "Formicaio dell'allevamento",
+    "ja": "孵化場アリ塚",
+    "ko": "부화장 개밋둑",
+    "pt-BR": "Formigueiro da Incubadora",
+    "zh-Hans": "孵化室蚁丘",
+    "zh-Hant": "孵化巢蟻丘"
+   }
+  },
+  "Anthill_Hatchery_B2": {
+   "area_id": 25,
+   "kind": "underground",
+   "names": {
+    "de": "Brutplatz-Ameisenhügel",
+    "en": "Hatchery Anthill",
+    "es": "Hormiguero del criadero",
+    "es-MX": "Hormiguero del criadero",
+    "fr": "Fourmilière du couvoir",
+    "it": "Formicaio dell'allevamento",
+    "ja": "孵化場アリ塚",
+    "ko": "부화장 개밋둑",
+    "pt-BR": "Formigueiro da Incubadora",
+    "zh-Hans": "孵化室蚁丘",
+    "zh-Hant": "孵化巢蟻丘"
+   }
+  },
+  "Anthill_Hatchery_B3": {
+   "area_id": 25,
+   "kind": "underground",
+   "names": {
+    "de": "Brutplatz-Ameisenhügel",
+    "en": "Hatchery Anthill",
+    "es": "Hormiguero del criadero",
+    "es-MX": "Hormiguero del criadero",
+    "fr": "Fourmilière du couvoir",
+    "it": "Formicaio dell'allevamento",
+    "ja": "孵化場アリ塚",
+    "ko": "부화장 개밋둑",
+    "pt-BR": "Formigueiro da Incubadora",
+    "zh-Hans": "孵化室蚁丘",
+    "zh-Hant": "孵化巢蟻丘"
+   }
+  },
+  "Anthill_Hatchery_Lab": {
+   "area_id": 25,
+   "kind": "underground",
+   "names": {
+    "de": "Brutplatz-Ameisenhügel",
+    "en": "Hatchery Anthill",
+    "es": "Hormiguero del criadero",
+    "es-MX": "Hormiguero del criadero",
+    "fr": "Fourmilière du couvoir",
+    "it": "Formicaio dell'allevamento",
+    "ja": "孵化場アリ塚",
+    "ko": "부화장 개밋둑",
+    "pt-BR": "Formigueiro da Incubadora",
+    "zh-Hans": "孵化室蚁丘",
+    "zh-Hant": "孵化巢蟻丘"
+   }
+  },
+  "Anthill_Sinkhole": {
+   "area_id": 46,
+   "kind": "underground",
+   "names": {
+    "de": "Dolinen-Ameisenhügel",
+    "en": "Sinkhole Anthill",
+    "es": "Hormiguero del hoyo",
+    "es-MX": "Hormiguero del sumidero",
+    "fr": "Fourmilière du gouffre",
+    "it": "Formicaio voragine",
+    "ja": "陥没穴アリ塚",
+    "ko": "싱크홀 개밋둑",
+    "pt-BR": "Formigueiro da Dolina",
+    "zh-Hans": "地洞蚁丘",
+    "zh-Hant": "天坑蟻丘"
+   }
+  },
+  "Anthill_Sinkhole_Cave": {
+   "area_id": 46,
+   "kind": "underground",
+   "names": {
+    "de": "Dolinen-Ameisenhügel",
+    "en": "Sinkhole Anthill",
+    "es": "Hormiguero del hoyo",
+    "es-MX": "Hormiguero del sumidero",
+    "fr": "Fourmilière du gouffre",
+    "it": "Formicaio voragine",
+    "ja": "陥没穴アリ塚",
+    "ko": "싱크홀 개밋둑",
+    "pt-BR": "Formigueiro da Dolina",
+    "zh-Hans": "地洞蚁丘",
+    "zh-Hant": "天坑蟻丘"
+   }
+  },
+  "Anthill_Sinkhole_Lab": {
+   "area_id": 46,
+   "kind": "underground",
+   "names": {
+    "de": "Dolinen-Ameisenhügel",
+    "en": "Sinkhole Anthill",
+    "es": "Hormiguero del hoyo",
+    "es-MX": "Hormiguero del sumidero",
+    "fr": "Fourmilière du gouffre",
+    "it": "Formicaio voragine",
+    "ja": "陥没穴アリ塚",
+    "ko": "싱크홀 개밋둑",
+    "pt-BR": "Formigueiro da Dolina",
+    "zh-Hans": "地洞蚁丘",
+    "zh-Hant": "天坑蟻丘"
+   }
+  },
+  "Anthill_Sinkhole_Lab_Underwater": {
+   "area_id": 46,
+   "kind": "underground",
+   "names": {
+    "de": "Dolinen-Ameisenhügel",
+    "en": "Sinkhole Anthill",
+    "es": "Hormiguero del hoyo",
+    "es-MX": "Hormiguero del sumidero",
+    "fr": "Fourmilière du gouffre",
+    "it": "Formicaio voragine",
+    "ja": "陥没穴アリ塚",
+    "ko": "싱크홀 개밋둑",
+    "pt-BR": "Formigueiro da Dolina",
+    "zh-Hans": "地洞蚁丘",
+    "zh-Hant": "天坑蟻丘"
+   }
+  },
+  "Anthill_Sinkhole_Queen": {
+   "area_id": 46,
+   "kind": "underground",
+   "names": {
+    "de": "Dolinen-Ameisenhügel",
+    "en": "Sinkhole Anthill",
+    "es": "Hormiguero del hoyo",
+    "es-MX": "Hormiguero del sumidero",
+    "fr": "Fourmilière du gouffre",
+    "it": "Formicaio voragine",
+    "ja": "陥没穴アリ塚",
+    "ko": "싱크홀 개밋둑",
+    "pt-BR": "Formigueiro da Dolina",
+    "zh-Hans": "地洞蚁丘",
+    "zh-Hant": "天坑蟻丘"
+   }
+  },
+  "Anthill_Snackbar": {
+   "area_id": 26,
+   "kind": "underground",
+   "names": {
+    "de": "Snackbar-Ameisenhügel",
+    "en": "Snackbar Anthill",
+    "es": "Hormiguero del quiosco",
+    "es-MX": "Hormiguero de la cafetería",
+    "fr": "Fourmilière du snack",
+    "it": "Formicaio dello Snack bar",
+    "ja": "スナックバーアリ塚",
+    "ko": "스낵바 개밋둑",
+    "pt-BR": "Formigueiro da Lanchonete",
+    "zh-Hans": "零食吧蚁丘",
+    "zh-Hant": "販賣亭蟻丘"
+   }
+  },
+  "Anthill_SpiderDen_B1": {
+   "area_id": 23,
+   "kind": "underground",
+   "names": {
+    "de": "Spinnenhöhlen-Ameisenhügel",
+    "en": "Spider Den Anthill",
+    "es": "Hormiguero madriguera de arañas",
+    "es-MX": "Hormiguero de guarida de arañas",
+    "fr": "Fourmilière de l'antre de l'araignée",
+    "it": "Formicaio del covo del ragno",
+    "ja": "クモの巣のアリ塚",
+    "ko": "거미 둥지 개밋둑",
+    "pt-BR": "Formigueiro da Toca de Aranha",
+    "zh-Hans": "蜘蛛巢穴蚁丘",
+    "zh-Hant": "蜘蛛窩蟻丘"
+   }
+  },
+  "Anthill_SpiderDen_B2": {
+   "area_id": 23,
+   "kind": "underground",
+   "names": {
+    "de": "Spinnenhöhlen-Ameisenhügel",
+    "en": "Spider Den Anthill",
+    "es": "Hormiguero madriguera de arañas",
+    "es-MX": "Hormiguero de guarida de arañas",
+    "fr": "Fourmilière de l'antre de l'araignée",
+    "it": "Formicaio del covo del ragno",
+    "ja": "クモの巣のアリ塚",
+    "ko": "거미 둥지 개밋둑",
+    "pt-BR": "Formigueiro da Toca de Aranha",
+    "zh-Hans": "蜘蛛巢穴蚁丘",
+    "zh-Hant": "蜘蛛窩蟻丘"
+   }
+  },
+  "Anthill_SpiderDen_B3": {
+   "area_id": 23,
+   "kind": "underground",
+   "names": {
+    "de": "Spinnenhöhlen-Ameisenhügel",
+    "en": "Spider Den Anthill",
+    "es": "Hormiguero madriguera de arañas",
+    "es-MX": "Hormiguero de guarida de arañas",
+    "fr": "Fourmilière de l'antre de l'araignée",
+    "it": "Formicaio del covo del ragno",
+    "ja": "クモの巣のアリ塚",
+    "ko": "거미 둥지 개밋둑",
+    "pt-BR": "Formigueiro da Toca de Aranha",
+    "zh-Hans": "蜘蛛巢穴蚁丘",
+    "zh-Hant": "蜘蛛窩蟻丘"
+   }
+  },
+  "Anthill_Toxic_B1": {
+   "area_id": 24,
+   "kind": "underground",
+   "names": {
+    "de": "Giftiger Ameisenhügel",
+    "en": "Toxic Anthill",
+    "es": "Hormiguero tóxico",
+    "es-MX": "Hormiguero tóxico",
+    "fr": "Fourmilière toxique",
+    "it": "Formicaio tossico",
+    "ja": "毒アリ塚",
+    "ko": "독성 개밋둑",
+    "pt-BR": "Formigueiro Tóxico",
+    "zh-Hans": "毒素蚁丘",
+    "zh-Hant": "毒氣蟻丘"
+   }
+  },
+  "Anthill_Toxic_B2": {
+   "area_id": 24,
+   "kind": "underground",
+   "names": {
+    "de": "Giftiger Ameisenhügel",
+    "en": "Toxic Anthill",
+    "es": "Hormiguero tóxico",
+    "es-MX": "Hormiguero tóxico",
+    "fr": "Fourmilière toxique",
+    "it": "Formicaio tossico",
+    "ja": "毒アリ塚",
+    "ko": "독성 개밋둑",
+    "pt-BR": "Formigueiro Tóxico",
+    "zh-Hans": "毒素蚁丘",
+    "zh-Hant": "毒氣蟻丘"
+   }
+  },
+  "Anthill_Toxic_B3": {
+   "area_id": 24,
+   "kind": "underground",
+   "names": {
+    "de": "Giftiger Ameisenhügel",
+    "en": "Toxic Anthill",
+    "es": "Hormiguero tóxico",
+    "es-MX": "Hormiguero tóxico",
+    "fr": "Fourmilière toxique",
+    "it": "Formicaio tossico",
+    "ja": "毒アリ塚",
+    "ko": "독성 개밋둑",
+    "pt-BR": "Formigueiro Tóxico",
+    "zh-Hans": "毒素蚁丘",
+    "zh-Hant": "毒氣蟻丘"
+   }
+  },
+  "Anthill_WarTorn_B1": {
+   "area_id": 44,
+   "kind": "underground",
+   "names": {
+    "de": "Kriegszerrütteter Ameisenhügel",
+    "en": "War-Torn Anthill",
+    "es": "Hormiguero devastado",
+    "es-MX": "Hormiguero destruido",
+    "fr": "Fourmilière ravagée",
+    "it": "Formicaio devastato",
+    "ja": "戦禍アリ塚",
+    "ko": "전쟁터 개밋둑",
+    "pt-BR": "Formigueiro Assolado",
+    "zh-Hans": "被战火摧残的蚁丘",
+    "zh-Hant": "戰火蟻丘"
+   }
+  },
+  "Anthill_WarTorn_B2": {
+   "area_id": 44,
+   "kind": "underground",
+   "names": {
+    "de": "Kriegszerrütteter Ameisenhügel",
+    "en": "War-Torn Anthill",
+    "es": "Hormiguero devastado",
+    "es-MX": "Hormiguero destruido",
+    "fr": "Fourmilière ravagée",
+    "it": "Formicaio devastato",
+    "ja": "戦禍アリ塚",
+    "ko": "전쟁터 개밋둑",
+    "pt-BR": "Formigueiro Assolado",
+    "zh-Hans": "被战火摧残的蚁丘",
+    "zh-Hant": "戰火蟻丘"
+   }
+  },
+  "Anthill_WarTorn_B3": {
+   "area_id": 44,
+   "kind": "underground",
+   "names": {
+    "de": "Kriegszerrütteter Ameisenhügel",
+    "en": "War-Torn Anthill",
+    "es": "Hormiguero devastado",
+    "es-MX": "Hormiguero destruido",
+    "fr": "Fourmilière ravagée",
+    "it": "Formicaio devastato",
+    "ja": "戦禍アリ塚",
+    "ko": "전쟁터 개밋둑",
+    "pt-BR": "Formigueiro Assolado",
+    "zh-Hans": "被战火摧残的蚁丘",
+    "zh-Hant": "戰火蟻丘"
+   }
+  },
+  "Anthill_WarTorn_Cave": {
+   "area_id": 44,
+   "kind": "underground",
+   "names": {
+    "de": "Kriegszerrütteter Ameisenhügel",
+    "en": "War-Torn Anthill",
+    "es": "Hormiguero devastado",
+    "es-MX": "Hormiguero destruido",
+    "fr": "Fourmilière ravagée",
+    "it": "Formicaio devastato",
+    "ja": "戦禍アリ塚",
+    "ko": "전쟁터 개밋둑",
+    "pt-BR": "Formigueiro Assolado",
+    "zh-Hans": "被战火摧残的蚁丘",
+    "zh-Hant": "戰火蟻丘"
+   }
+  },
+  "Bayou_Area": {
+   "area_id": 51,
+   "kind": "surface",
+   "names": {
+    "de": "Brückenbereich",
+    "en": "Bridge Area",
+    "es": "Zona del puente",
+    "es-MX": "Área del puente",
+    "fr": "Zone du pont",
+    "it": "Area Ponte",
+    "ja": "橋エリア",
+    "ko": "다리 지역",
+    "pt-BR": "Área da Ponte",
+    "zh-Hans": "桥梁区域",
+    "zh-Hant": "橋梁區"
+   }
+  },
+  "Bayou_Burrow": {
+   "area_id": 51,
+   "kind": "underground",
+   "names": {
+    "de": "Brückenbereich",
+    "en": "Bridge Area",
+    "es": "Zona del puente",
+    "es-MX": "Área del puente",
+    "fr": "Zone du pont",
+    "it": "Area Ponte",
+    "ja": "橋エリア",
+    "ko": "다리 지역",
+    "pt-BR": "Área da Ponte",
+    "zh-Hans": "桥梁区域",
+    "zh-Hant": "橋梁區"
+   }
+  },
+  "BrookhollowPark": {
+   "area_id": 1,
+   "kind": "surface",
+   "names": {
+    "de": "Brookhollow City Park",
+    "en": "Brookhollow City Park",
+    "es": "Brookhollow Park",
+    "es-MX": "Parque de la ciudad de Brookhollow",
+    "fr": "Parc municipal de Brookhollow",
+    "it": "Parco di Brookhollow",
+    "ja": "ブルックホロウ市立公園",
+    "ko": "브룩할로우 시립 공원",
+    "pt-BR": "Parque Municipal de Brookhollow",
+    "zh-Hans": "布鲁克霍洛城市公园",
+    "zh-Hant": "布魯克霍洛市立公園"
+   }
+  },
+  "Ceremony_Area": {
+   "area_id": 8,
+   "kind": "surface",
+   "names": {
+    "de": "Zeremonienplatz",
+    "en": "Ceremony Area",
+    "es": "Zona de la ceremonia",
+    "es-MX": "Área de ceremonias",
+    "fr": "Zone de la cérémonie",
+    "it": "Area Cerimonia",
+    "ja": "セレモニーエリア",
+    "ko": "기념식장 지역",
+    "pt-BR": "Área de Cerimônias",
+    "zh-Hans": "典礼区域",
+    "zh-Hant": "典禮區"
+   }
+  },
+  "Ceremony_Burrow": {
+   "area_id": 8,
+   "kind": "underground",
+   "names": {
+    "de": "Zeremonienplatz",
+    "en": "Ceremony Area",
+    "es": "Zona de la ceremonia",
+    "es-MX": "Área de ceremonias",
+    "fr": "Zone de la cérémonie",
+    "it": "Area Cerimonia",
+    "ja": "セレモニーエリア",
+    "ko": "기념식장 지역",
+    "pt-BR": "Área de Cerimônias",
+    "zh-Hans": "典礼区域",
+    "zh-Hant": "典禮區"
+   }
+  },
+  "Entrance_Area": {
+   "area_id": 9,
+   "kind": "surface",
+   "names": {
+    "de": "Eingangsbereich",
+    "en": "Entrance Area",
+    "es": "Zona de la entrada",
+    "es-MX": "Área de ingreso",
+    "fr": "Zone de l'entrée",
+    "it": "Area Ingresso",
+    "ja": "入り口エリア",
+    "ko": "입구 지역",
+    "pt-BR": "Área da Entrada",
+    "zh-Hans": "入口区域",
+    "zh-Hant": "入口區"
+   }
+  },
+  "Entrance_Burrow": {
+   "area_id": 9,
+   "kind": "underground",
+   "names": {
+    "de": "Eingangsbereich",
+    "en": "Entrance Area",
+    "es": "Zona de la entrada",
+    "es-MX": "Área de ingreso",
+    "fr": "Zone de l'entrée",
+    "it": "Area Ingresso",
+    "ja": "入り口エリア",
+    "ko": "입구 지역",
+    "pt-BR": "Área da Entrada",
+    "zh-Hans": "入口区域",
+    "zh-Hant": "入口區"
+   }
+  },
+  "FirePit_Area": {
+   "area_id": 3,
+   "kind": "surface",
+   "names": {
+    "de": "Feuerstelle",
+    "en": "Fire Pit Area",
+    "es": "Zona del foso de fuego",
+    "es-MX": "Área del fogonero",
+    "fr": "Zone du brasero",
+    "it": "Area Braciere",
+    "ja": "たき火台エリア",
+    "ko": "불구덩이 지역",
+    "pt-BR": "Área da Fogueira",
+    "zh-Hans": "篝火坑区域",
+    "zh-Hant": "營火坑區"
+   }
+  },
+  "FirePit_Burrow": {
+   "area_id": 3,
+   "kind": "underground",
+   "names": {
+    "de": "Feuerstelle",
+    "en": "Fire Pit Area",
+    "es": "Zona del foso de fuego",
+    "es-MX": "Área del fogonero",
+    "fr": "Zone du brasero",
+    "it": "Area Braciere",
+    "ja": "たき火台エリア",
+    "ko": "불구덩이 지역",
+    "pt-BR": "Área da Fogueira",
+    "zh-Hans": "篝火坑区域",
+    "zh-Hant": "營火坑區"
+   }
+  },
+  "Garden_Main": {
+   "area_id": 42,
+   "kind": "surface",
+   "names": {
+    "de": "Community-Garten",
+    "en": "Community Garden",
+    "es": "Jardín de la comunidad",
+    "es-MX": "Jardín comunitario",
+    "fr": "Jardin communautaire",
+    "it": "Giardino comunitario",
+    "ja": "コミュニティガーデン",
+    "ko": "커뮤니티 정원",
+    "pt-BR": "Jardim Comunitário",
+    "zh-Hans": "社区花园",
+    "zh-Hant": "社區花園"
+   }
+  },
+  "GrassGame_Area": {
+   "area_id": 5,
+   "kind": "surface",
+   "names": {
+    "de": "Krocketplatz-Bereich",
+    "en": "Croquet Court Area",
+    "es": "Zona de campo de croquet",
+    "es-MX": "Área de la cancha de croquet",
+    "fr": "Zone du terrain de croquet",
+    "it": "Area campo da croquet",
+    "ja": "クロケットコートエリア",
+    "ko": "크로케 코트 지역",
+    "pt-BR": "Área da Quadra de Croquet",
+    "zh-Hans": "槌球场区域",
+    "zh-Hant": "槌球場區"
+   }
+  },
+  "GrassGame_Burrow": {
+   "area_id": 5,
+   "kind": "underground",
+   "names": {
+    "de": "Krocketplatz-Bereich",
+    "en": "Croquet Court Area",
+    "es": "Zona de campo de croquet",
+    "es-MX": "Área de la cancha de croquet",
+    "fr": "Zone du terrain de croquet",
+    "it": "Area campo da croquet",
+    "ja": "クロケットコートエリア",
+    "ko": "크로케 코트 지역",
+    "pt-BR": "Área da Quadra de Croquet",
+    "zh-Hans": "槌球场区域",
+    "zh-Hant": "槌球場區"
+   }
+  },
+  "GrassGame_Hedge": {
+   "area_id": 3,
+   "kind": "surface",
+   "names": {
+    "de": "Feuerstelle",
+    "en": "Fire Pit Area",
+    "es": "Zona del foso de fuego",
+    "es-MX": "Área del fogonero",
+    "fr": "Zone du brasero",
+    "it": "Area Braciere",
+    "ja": "たき火台エリア",
+    "ko": "불구덩이 지역",
+    "pt-BR": "Área da Fogueira",
+    "zh-Hans": "篝火坑区域",
+    "zh-Hant": "營火坑區"
+   }
+  },
+  "GrassGame_Observation": {
+   "area_id": 49,
+   "kind": "surface",
+   "names": {
+    "de": "Beobachtungsdeck",
+    "en": "Observation Deck",
+    "es": "Plataforma de observación",
+    "es-MX": "Plataforma de observación",
+    "fr": "Plateforme d'observation",
+    "it": "Ponte di osservazione",
+    "ja": "展望デッキ",
+    "ko": "관측소",
+    "pt-BR": "Deck de Observação",
+    "zh-Hans": "观测台",
+    "zh-Hant": "觀測台"
+   }
+  },
+  "Greenhouse_Area": {
+   "area_id": 36,
+   "kind": "surface",
+   "names": {
+    "de": "Gewächshaus-Bereich",
+    "en": "Greenhouse Area",
+    "es": "Zona del invernadero",
+    "es-MX": "Área del invernadero",
+    "fr": "Zone de la serre",
+    "it": "Area Serra",
+    "ja": "温室エリア",
+    "ko": "온실 지역",
+    "pt-BR": "Área de Estufa",
+    "zh-Hans": "温室区域",
+    "zh-Hant": "溫室區"
+   }
+  },
+  "Greenhouse_Burrow": {
+   "area_id": 36,
+   "kind": "underground",
+   "names": {
+    "de": "Gewächshaus-Bereich",
+    "en": "Greenhouse Area",
+    "es": "Zona del invernadero",
+    "es-MX": "Área del invernadero",
+    "fr": "Zone de la serre",
+    "it": "Area Serra",
+    "ja": "温室エリア",
+    "ko": "온실 지역",
+    "pt-BR": "Área de Estufa",
+    "zh-Hans": "温室区域",
+    "zh-Hant": "溫室區"
+   }
+  },
+  "Greenhouse_FieldArchives": {
+   "area_id": 43,
+   "kind": "lab",
+   "names": {
+    "de": "Feldarchiv",
+    "en": "Field Archives",
+    "es": "Archivos de campo",
+    "es-MX": "Archivos de Campo",
+    "fr": "Archives de terrain",
+    "it": "Archivi",
+    "ja": "現地アーカイブ",
+    "ko": "현장 기록 보관소",
+    "pt-BR": "Arquivos de Campo",
+    "zh-Hans": "实地档案库",
+    "zh-Hant": "野外檔案庫"
+   }
+  },
+  "Greenhouse_GrowingPod": {
+   "area_id": 63,
+   "kind": "surface",
+   "names": {
+    "de": "Wachstumskapsel",
+    "en": "Growing Pod",
+    "es": "Vaina de crecimiento",
+    "es-MX": "Cápsula de cultivo",
+    "fr": "Capsule de culture",
+    "it": "Capsula di crescita",
+    "ja": "成長ポッド",
+    "ko": "재배 포드",
+    "pt-BR": "Cápsula de Crescimento",
+    "zh-Hans": "培育舱",
+    "zh-Hant": "種植艙"
+   }
+  },
+  "IceCart_Area": {
+   "area_id": 10,
+   "kind": "surface",
+   "names": {
+    "de": "Eiswagen",
+    "en": "Ice Cream Cart Area",
+    "es": "Zona del carrito de helados",
+    "es-MX": "Área del carrito de helados",
+    "fr": "Zone du chariot de crèmes glacées",
+    "it": "Area Carretto dei gelati",
+    "ja": "アイスクリームカートエリア",
+    "ko": "아이스크림 가판대 지역",
+    "pt-BR": "Área do Carrinho de Sorvete",
+    "zh-Hans": "冰淇淋车区域",
+    "zh-Hant": "冰淇淋推車區"
+   }
+  },
+  "IceCart_Burrow": {
+   "area_id": 10,
+   "kind": "underground",
+   "names": {
+    "de": "Eiswagen",
+    "en": "Ice Cream Cart Area",
+    "es": "Zona del carrito de helados",
+    "es-MX": "Área del carrito de helados",
+    "fr": "Zone du chariot de crèmes glacées",
+    "it": "Area Carretto dei gelati",
+    "ja": "アイスクリームカートエリア",
+    "ko": "아이스크림 가판대 지역",
+    "pt-BR": "Área do Carrinho de Sorvete",
+    "zh-Hans": "冰淇淋车区域",
+    "zh-Hant": "冰淇淋推車區"
+   }
+  },
+  "IceCart_Cart": {
+   "area_id": 28,
+   "kind": "surface",
+   "names": {
+    "de": "Eiswagen",
+    "en": "Ice Cream Cart",
+    "es": "Carrito de helados",
+    "es-MX": "Carrito de helados",
+    "fr": "Chariot de crèmes glacées",
+    "it": "Carretto dei gelati",
+    "ja": "アイスクリームカート",
+    "ko": "아이스크림 가판대",
+    "pt-BR": "Carrinho de Sorvete",
+    "zh-Hans": "冰淇淋车",
+    "zh-Hant": "冰淇淋推車"
+   }
+  },
+  "IceCart_Tunnels": {
+   "area_id": 28,
+   "kind": "underground",
+   "names": {
+    "de": "Eiswagen",
+    "en": "Ice Cream Cart",
+    "es": "Carrito de helados",
+    "es-MX": "Carrito de helados",
+    "fr": "Chariot de crèmes glacées",
+    "it": "Carretto dei gelati",
+    "ja": "アイスクリームカート",
+    "ko": "아이스크림 가판대",
+    "pt-BR": "Carrinho de Sorvete",
+    "zh-Hans": "冰淇淋车",
+    "zh-Hant": "冰淇淋推車"
+   }
+  },
+  "Mountain_Area": {
+   "area_id": 53,
+   "kind": "surface",
+   "names": {
+    "de": "„Knorrige Rinde“-Bereich",
+    "en": "Gnarly Bark Area",
+    "es": "Zona del árbol retorcido",
+    "es-MX": "Área de la Corteza Retorcida",
+    "fr": "Zone de l'écorce noueuse",
+    "it": "Area Corteccia nodosa",
+    "ja": "ねじれた樹皮エリア",
+    "ko": "울퉁불퉁한 나무껍질 지역",
+    "pt-BR": "Área da Casca Retorcida",
+    "zh-Hans": "瘤节树皮区域",
+    "zh-Hant": "盤根樹皮區"
+   }
+  },
+  "Mountain_Burrow": {
+   "area_id": 53,
+   "kind": "underground",
+   "names": {
+    "de": "„Knorrige Rinde“-Bereich",
+    "en": "Gnarly Bark Area",
+    "es": "Zona del árbol retorcido",
+    "es-MX": "Área de la Corteza Retorcida",
+    "fr": "Zone de l'écorce noueuse",
+    "it": "Area Corteccia nodosa",
+    "ja": "ねじれた樹皮エリア",
+    "ko": "울퉁불퉁한 나무껍질 지역",
+    "pt-BR": "Área da Casca Retorcida",
+    "zh-Hans": "瘤节树皮区域",
+    "zh-Hant": "盤根樹皮區"
+   }
+  },
+  "Mountain_Caves": {
+   "area_id": 53,
+   "kind": "underground",
+   "names": {
+    "de": "„Knorrige Rinde“-Bereich",
+    "en": "Gnarly Bark Area",
+    "es": "Zona del árbol retorcido",
+    "es-MX": "Área de la Corteza Retorcida",
+    "fr": "Zone de l'écorce noueuse",
+    "it": "Area Corteccia nodosa",
+    "ja": "ねじれた樹皮エリア",
+    "ko": "울퉁불퉁한 나무껍질 지역",
+    "pt-BR": "Área da Casca Retorcida",
+    "zh-Hans": "瘤节树皮区域",
+    "zh-Hant": "盤根樹皮區"
+   }
+  },
+  "Mountain_Top": {
+   "area_id": 53,
+   "kind": "surface",
+   "names": {
+    "de": "„Knorrige Rinde“-Bereich",
+    "en": "Gnarly Bark Area",
+    "es": "Zona del árbol retorcido",
+    "es-MX": "Área de la Corteza Retorcida",
+    "fr": "Zone de l'écorce noueuse",
+    "it": "Area Corteccia nodosa",
+    "ja": "ねじれた樹皮エリア",
+    "ko": "울퉁불퉁한 나무껍질 지역",
+    "pt-BR": "Área da Casca Retorcida",
+    "zh-Hans": "瘤节树皮区域",
+    "zh-Hant": "盤根樹皮區"
+   }
+  },
+  "Outpost_AbyssalCaves": {
+   "area_id": 59,
+   "kind": "outpost",
+   "names": {
+    "de": "Ranger-Außenposten: Abgrundtiefe Höhlen",
+    "en": "Ranger Outpost: Abyssal Caves",
+    "es": "Puesto de guardabosques: cuevas abisales",
+    "es-MX": "Puesto del guardaparque: cuevas abisales",
+    "fr": "Avant-poste des rangers : grottes abyssales",
+    "it": "Avamposto dei ranger: Grotte abissali",
+    "ja": "レンジャー前哨基地：深淵の洞窟",
+    "ko": "레인저 초소: 심연 동굴",
+    "pt-BR": "Posto dos Patrulheiros: Cavernas Abissais",
+    "zh-Hans": "游侠前哨站：深渊洞窟",
+    "zh-Hant": "遊俠前哨基地：深淵洞穴"
+   }
+  },
+  "Outpost_Bridge": {
+   "area_id": 55,
+   "kind": "outpost",
+   "names": {
+    "de": "Ranger-Außenposten: Brücke",
+    "en": "Ranger Outpost: Bridge",
+    "es": "Puesto de guardabosques: puente",
+    "es-MX": "Puesto del guardaparque: puente",
+    "fr": "Avant-poste des rangers : pont",
+    "it": "Avamposto dei ranger: Ponte",
+    "ja": "レンジャー前哨基地：橋",
+    "ko": "레인저 초소: 다리",
+    "pt-BR": "Posto dos Patrulheiros: Ponte",
+    "zh-Hans": "游侠前哨站：桥梁",
+    "zh-Hant": "遊俠前哨基地：橋梁"
+   }
+  },
+  "Outpost_Ceremony": {
+   "area_id": 12,
+   "kind": "outpost",
+   "names": {
+    "de": "Ranger-Außenposten: Zeremonienplatz",
+    "en": "Ranger Outpost: Ceremony",
+    "es": "Puesto de guardabosques: ceremonia",
+    "es-MX": "Puesto del guardaparque: ceremonias",
+    "fr": "Avant-poste des rangers : cérémonie",
+    "it": "Avamposto dei ranger: Cerimonia",
+    "ja": "レンジャー前哨基地: セレモニー",
+    "ko": "레인저 초소: 기념식장",
+    "pt-BR": "Posto dos Patrulheiros: Cerimônia",
+    "zh-Hans": "游侠前哨站：典礼",
+    "zh-Hant": "遊俠前哨基地：典禮"
+   }
+  },
+  "Outpost_DivingStation": {
+   "area_id": 58,
+   "kind": "outpost",
+   "names": {
+    "de": "Tauchstation",
+    "en": "Diving Station",
+    "es": "Estación de buceo",
+    "es-MX": "Estación de Buceo de Ominent",
+    "fr": "Poste de plongée",
+    "it": "Stazione subacquea",
+    "ja": "オミネントダイブステーション",
+    "ko": "잠수 스테이션",
+    "pt-BR": "Estação de Mergulho",
+    "zh-Hans": "潜水站",
+    "zh-Hant": "潛水站"
+   }
+  },
+  "Outpost_FirePit": {
+   "area_id": 16,
+   "kind": "outpost",
+   "names": {
+    "de": "Ranger-Außenposten: Feuerstelle",
+    "en": "Ranger Outpost: Fire Pit",
+    "es": "Puesto de guardabosques: foso de fuego",
+    "es-MX": "Puesto del guardaparque: fogonero",
+    "fr": "Avant-poste des rangers : brasero",
+    "it": "Avamposto dei ranger: Braciere",
+    "ja": "レンジャー前哨基地: たき火台",
+    "ko": "레인저 초소: 불구덩이",
+    "pt-BR": "Posto dos Patrulheiros: Fogueira",
+    "zh-Hans": "游侠前哨站：篝火坑",
+    "zh-Hant": "遊俠前哨基地：營火坑"
+   }
+  },
+  "Outpost_FlowerBed": {
+   "area_id": 21,
+   "kind": "outpost",
+   "names": {
+    "de": "Ranger-Außenposten: Blumenbeet",
+    "en": "Ranger Outpost: Flower Bed",
+    "es": "Puesto de guardabosques: lecho de flores",
+    "es-MX": "Puesto del guardaparque: cama de flores",
+    "fr": "Avant-poste des rangers : parterre de fleurs",
+    "it": "Avamposto dei ranger: Aiuola fiorita",
+    "ja": "レンジャー前哨基地: 花壇",
+    "ko": "레인저 초소: 화단",
+    "pt-BR": "Posto dos Patrulheiros: Canteiro de Flores",
+    "zh-Hans": "游侠前哨站：花坛",
+    "zh-Hant": "遊俠前哨基地：花圃"
+   }
+  },
+  "Outpost_Greenhouse": {
+   "area_id": 40,
+   "kind": "outpost",
+   "names": {
+    "de": "Ranger-Außenposten: Gewächshaus",
+    "en": "Ranger Outpost: Greenhouse",
+    "es": "Puesto de guardabosques: invernadero",
+    "es-MX": "Puesto del guardaparque: invernadero",
+    "fr": "Avant-poste des rangers : serre",
+    "it": "Avamposto dei ranger: Serra",
+    "ja": "レンジャー前哨基地：温室",
+    "ko": "레인저 초소: 온실",
+    "pt-BR": "Posto dos Patrulheiros: Estufa",
+    "zh-Hans": "游侠前哨站：温室",
+    "zh-Hant": "遊俠前哨基地：溫室"
+   }
+  },
+  "Outpost_IceCreamCart": {
+   "area_id": 20,
+   "kind": "outpost",
+   "names": {
+    "de": "Ranger-Außenposten: Eiswagen",
+    "en": "Ranger Outpost: Ice Cream Cart",
+    "es": "Puesto de guardabosques: carrito de helados",
+    "es-MX": "Puesto del guardaparque: carrito de helados",
+    "fr": "Avant-poste des rangers : chariot de crèmes glacées",
+    "it": "Avamposto dei ranger: Carretto dei gelati",
+    "ja": "レンジャー前哨基地: アイスクリームカート",
+    "ko": "레인저 초소: 아이스크림 가판대",
+    "pt-BR": "Posto dos Patrulheiros: Carrinho de Sorvete",
+    "zh-Hans": "游侠前哨站：冰淇淋车",
+    "zh-Hant": "遊俠前哨基地：冰淇淋推車"
+   }
+  },
+  "Outpost_LandingPlatform": {
+   "area_id": 60,
+   "kind": "outpost",
+   "names": {
+    "de": "Ranger-Außenposten: Landebasis",
+    "en": "Ranger Outpost: Landing Platform",
+    "es": "Puesto de guardabosques: soporte de aterrizaje",
+    "es-MX": "Puesto del guardaparque: plataforma de aterrizaje",
+    "fr": "Avant-poste des rangers : plateforme d'atterrissage",
+    "it": "Avamposto dei ranger: Zona di atterraggio",
+    "ja": "レンジャー前哨基地：着陸プラットフォーム",
+    "ko": "레인저 초소: 착륙 플랫폼",
+    "pt-BR": "Posto dos Patrulheiros: Plataforma de Pouso",
+    "zh-Hans": "游侠前哨站：着陆平台",
+    "zh-Hant": "遊俠前哨基地：降落平台"
+   }
+  },
+  "Outpost_Mountains": {
+   "area_id": 56,
+   "kind": "outpost",
+   "names": {
+    "de": "Ranger-Außenposten: Knorrige Rinde",
+    "en": "Ranger Outpost: Gnarly Bark",
+    "es": "Puesto de guardabosques: árbol retorcido",
+    "es-MX": "Puesto del guardaparque: corteza retorcida",
+    "fr": "Avant-poste des rangers : écorce noueuse",
+    "it": "Avamposto dei ranger: Corteccia nodosa",
+    "ja": "レンジャー前哨基地：ねじれた樹皮",
+    "ko": "레인저 초소: 울퉁불퉁한 나무껍질",
+    "pt-BR": "Posto dos Patrulheiros: Casca Retorcida",
+    "zh-Hans": "游侠前哨站：瘤节树皮",
+    "zh-Hant": "遊俠前哨基地：盤根樹皮"
+   }
+  },
+  "Outpost_ParkBench": {
+   "area_id": 15,
+   "kind": "outpost",
+   "names": {
+    "de": "Ranger-Außenposten: Parkbank",
+    "en": "Ranger Outpost: Park Bench",
+    "es": "Puesto de guardabosques: banco del parque",
+    "es-MX": "Puesto del guardaparque: banco de plaza",
+    "fr": "Avant-poste des rangers : banc du parc",
+    "it": "Avamposto dei ranger: Panchina del parco",
+    "ja": "レンジャー前哨基地: 公園のベンチ",
+    "ko": "레인저 초소: 공원 벤치",
+    "pt-BR": "Posto dos Patrulheiros: Banco do Parque",
+    "zh-Hans": "游侠前哨站：花园长椅",
+    "zh-Hant": "遊俠前哨基地：公園長椅"
+   }
+  },
+  "Outpost_Pergola": {
+   "area_id": 14,
+   "kind": "outpost",
+   "names": {
+    "de": "Ranger-Außenposten: Pergola",
+    "en": "Ranger Outpost: Pergola",
+    "es": "Puesto de guardabosques: pérgola",
+    "es-MX": "Puesto del guardaparque: pérgola",
+    "fr": "Avant-poste des rangers : pergola",
+    "it": "Avamposto dei ranger: Pergola",
+    "ja": "レンジャー前哨基地: パーゴラ",
+    "ko": "레인저 초소: 퍼걸러",
+    "pt-BR": "Posto dos Patrulheiros: Pérgola",
+    "zh-Hans": "游侠前哨站：花架",
+    "zh-Hant": "遊俠前哨基地：涼亭"
+   }
+  },
+  "Outpost_Pergola_RestingMusic": {
+   "area_id": 14,
+   "kind": "outpost",
+   "names": {
+    "de": "Ranger-Außenposten: Pergola",
+    "en": "Ranger Outpost: Pergola",
+    "es": "Puesto de guardabosques: pérgola",
+    "es-MX": "Puesto del guardaparque: pérgola",
+    "fr": "Avant-poste des rangers : pergola",
+    "it": "Avamposto dei ranger: Pergola",
+    "ja": "レンジャー前哨基地: パーゴラ",
+    "ko": "레인저 초소: 퍼걸러",
+    "pt-BR": "Posto dos Patrulheiros: Pérgola",
+    "zh-Hans": "游侠前哨站：花架",
+    "zh-Hant": "遊俠前哨基地：涼亭"
+   }
+  },
+  "Outpost_PineHill": {
+   "area_id": 17,
+   "kind": "outpost",
+   "names": {
+    "de": "Ranger-Außenposten: Kiefernhügel",
+    "en": "Ranger Outpost: Pine Hill",
+    "es": "Puesto de guardabosques: pinar",
+    "es-MX": "Puesto del guardaparque: colina de pinos",
+    "fr": "Avant-poste des rangers : colline aux pins",
+    "it": "Avamposto dei ranger: Collina dei pini",
+    "ja": "レンジャー前哨基地: 松の丘",
+    "ko": "레인저 초소: 소나무 언덕",
+    "pt-BR": "Posto dos Patrulheiros: Colina dos Pinheiros",
+    "zh-Hans": "游侠前哨站：松林山",
+    "zh-Hant": "遊俠前哨基地：松丘"
+   }
+  },
+  "Outpost_Pond": {
+   "area_id": 57,
+   "kind": "outpost",
+   "names": {
+    "de": "Ranger-Außenposten: Teich",
+    "en": "Ranger Outpost: Pond",
+    "es": "Puesto de guardabosques: estanque",
+    "es-MX": "Puesto de avanzada del guardaparque: estanque",
+    "fr": "Avant-poste des rangers : mare",
+    "it": "Avamposto dei ranger: Laghetto",
+    "ja": "レンジャー前哨基地：池",
+    "ko": "레인저 초소: 연못",
+    "pt-BR": "Posto dos Patrulheiros: Lagoa",
+    "zh-Hans": "游侠前哨站：池塘",
+    "zh-Hant": "遊俠前哨基地：池塘"
+   }
+  },
+  "Outpost_Pond_Surface": {
+   "area_id": 57,
+   "kind": "outpost",
+   "names": {
+    "de": "Ranger-Außenposten: Teich",
+    "en": "Ranger Outpost: Pond",
+    "es": "Puesto de guardabosques: estanque",
+    "es-MX": "Puesto de avanzada del guardaparque: estanque",
+    "fr": "Avant-poste des rangers : mare",
+    "it": "Avamposto dei ranger: Laghetto",
+    "ja": "レンジャー前哨基地：池",
+    "ko": "레인저 초소: 연못",
+    "pt-BR": "Posto dos Patrulheiros: Lagoa",
+    "zh-Hans": "游侠前哨站：池塘",
+    "zh-Hant": "遊俠前哨基地：池塘"
+   }
+  },
+  "Outpost_PumpkinPatch": {
+   "area_id": 41,
+   "kind": "outpost",
+   "names": {
+    "de": "Ranger-Außenposten: Kürbisacker",
+    "en": "Ranger Outpost: Pumpkin Patch",
+    "es": "Puesto de guardabosques: huerto de calabazas",
+    "es-MX": "Puesto del guardaparque: área de calabazas",
+    "fr": "Avant-poste des rangers : carré de citrouilles",
+    "it": "Avamposto dei ranger: Campo di zucche",
+    "ja": "レンジャー前哨基地：カボチャ畑",
+    "ko": "레인저 초소: 호박밭",
+    "pt-BR": "Posto dos Patrulheiros: Plantação de Abóboras",
+    "zh-Hans": "游侠前哨站：南瓜田",
+    "zh-Hant": "遊俠前哨基地：南瓜田"
+   }
+  },
+  "Outpost_RoseGarden": {
+   "area_id": 22,
+   "kind": "outpost",
+   "names": {
+    "de": "Ranger-Außenposten: Rosengarten",
+    "en": "Ranger Outpost: Rose Garden",
+    "es": "Puesto de guardabosques: rosaleda",
+    "es-MX": "Puesto de avanzada del guardaparque: jardín de rosas",
+    "fr": "Avant-poste des rangers : roseraie",
+    "it": "Avamposto dei ranger: Roseto",
+    "ja": "レンジャー前哨基地：バラ園",
+    "ko": "레인저 초소: 장미 정원",
+    "pt-BR": "Posto dos Patrulheiros: Jardim de Rosas",
+    "zh-Hans": "游侠前哨站：玫瑰花园",
+    "zh-Hant": "遊俠前哨基地：玫瑰園"
+   }
+  },
+  "Outpost_Snackbar": {
+   "area_id": 19,
+   "kind": "outpost",
+   "names": {
+    "de": "Ranger-Außenposten: Snackbar",
+    "en": "Ranger Outpost: Snackbar",
+    "es": "Puesto de guardabosques: quiosco",
+    "es-MX": "Puesto del guardaparque: cafetería",
+    "fr": "Avant-poste des rangers : snack",
+    "it": "Avamposto dei ranger: Snack bar",
+    "ja": "レンジャー前哨基地: スナックバー",
+    "ko": "레인저 초소: 스낵바",
+    "pt-BR": "Posto dos Patrulheiros: Lanchonete",
+    "zh-Hans": "游侠前哨站：零食吧",
+    "zh-Hant": "遊俠前哨基地：販賣亭"
+   }
+  },
+  "Outpost_Statue": {
+   "area_id": 13,
+   "kind": "outpost",
+   "names": {
+    "de": "Ranger-Außenposten: Statue",
+    "en": "Ranger Outpost: Statue",
+    "es": "Puesto de guardabosques: estatua",
+    "es-MX": "Puesto del guardaparque: estatua",
+    "fr": "Avant-poste des rangers : statue",
+    "it": "Avamposto dei ranger: Statua",
+    "ja": "レンジャー前哨基地: 像",
+    "ko": "레인저 초소: 동상",
+    "pt-BR": "Posto dos Patrulheiros: Estátua",
+    "zh-Hans": "游侠前哨站：雕像",
+    "zh-Hant": "遊俠前哨基地：雕像"
+   }
+  },
+  "Outpost_TheWall": {
+   "area_id": 38,
+   "kind": "outpost",
+   "names": {
+    "de": "Ranger-Außenposten: Die Wand",
+    "en": "Ranger Outpost: The Wall",
+    "es": "Puesto de guardabosques: muro",
+    "es-MX": "Puesto del guardaparque: la pared",
+    "fr": "Avant-poste des rangers : le mur",
+    "it": "Avamposto dei ranger: Muro",
+    "ja": "レンジャー前哨基地：壁",
+    "ko": "레인저 초소: 벽",
+    "pt-BR": "Posto dos Patrulheiros: Muro",
+    "zh-Hans": "游侠前哨站：围墙",
+    "zh-Hant": "遊俠前哨基地：圍牆"
+   }
+  },
+  "Outpost_TrashBags": {
+   "area_id": 18,
+   "kind": "outpost",
+   "names": {
+    "de": "Ranger-Außenposten: Müllbeutel",
+    "en": "Ranger Outpost: Trash Bags",
+    "es": "Puesto de guardabosques: bolsas de basura",
+    "es-MX": "Puesto del guardaparque: bolsas de residuos",
+    "fr": "Avant-poste des rangers : sacs poubelle",
+    "it": "Avamposto dei ranger: Spazzatura",
+    "ja": "レンジャー前哨基地: ゴミ袋",
+    "ko": "레인저 초소: 쓰레기봉투",
+    "pt-BR": "Posto dos Patrulheiros: Sacos de Lixo",
+    "zh-Hans": "游侠前哨站：垃圾袋",
+    "zh-Hant": "遊俠前哨基地：垃圾袋"
+   }
+  },
+  "Outpost_VeggieGarden": {
+   "area_id": 39,
+   "kind": "outpost",
+   "names": {
+    "de": "Ranger-Außenposten: Gemüsegarten",
+    "en": "Ranger Outpost: Veggie Garden",
+    "es": "Puesto de guardabosques: huerto vegetal",
+    "es-MX": "Puesto del guardaparque: huerto",
+    "fr": "Avant-poste des rangers : potager",
+    "it": "Avamposto dei ranger: Orto",
+    "ja": "レンジャー前哨基地：ベジガーデン",
+    "ko": "레인저 초소: 채소밭",
+    "pt-BR": "Posto dos Patrulheiros: Horta",
+    "zh-Hans": "游侠前哨站：菜园",
+    "zh-Hant": "遊俠前哨基地：菜園"
+   }
+  },
+  "Pergola_Area": {
+   "area_id": 11,
+   "kind": "surface",
+   "names": {
+    "de": "Pergola",
+    "en": "Pergola Area",
+    "es": "Zona de la pérgola",
+    "es-MX": "Área de la pérgola",
+    "fr": "Zone de la pergola",
+    "it": "Area Pergola",
+    "ja": "パーゴラエリア",
+    "ko": "퍼걸러 지역",
+    "pt-BR": "Área da Pérgola",
+    "zh-Hans": "花架区域",
+    "zh-Hant": "涼亭區"
+   }
+  },
+  "Pergola_Burrow": {
+   "area_id": 11,
+   "kind": "underground",
+   "names": {
+    "de": "Pergola",
+    "en": "Pergola Area",
+    "es": "Zona de la pérgola",
+    "es-MX": "Área de la pérgola",
+    "fr": "Zone de la pergola",
+    "it": "Area Pergola",
+    "ja": "パーゴラエリア",
+    "ko": "퍼걸러 지역",
+    "pt-BR": "Área da Pérgola",
+    "zh-Hans": "花架区域",
+    "zh-Hant": "涼亭區"
+   }
+  },
+  "Picnic_Area": {
+   "area_id": 4,
+   "kind": "surface",
+   "names": {
+    "de": "Picknicktisch",
+    "en": "Picnic Table Area",
+    "es": "Zona de la mesa de pícnic",
+    "es-MX": "Área de la mesa de pícnic",
+    "fr": "Zone de la table de pique-nique",
+    "it": "Area Tavolo da picnic",
+    "ja": "ピクニックテーブルエリア",
+    "ko": "야외 식탁 지역",
+    "pt-BR": "Área da Mesa de Piquenique",
+    "zh-Hans": "野餐桌区域",
+    "zh-Hant": "野餐桌區"
+   }
+  },
+  "Picnic_Burrow": {
+   "area_id": 4,
+   "kind": "underground",
+   "names": {
+    "de": "Picknicktisch",
+    "en": "Picnic Table Area",
+    "es": "Zona de la mesa de pícnic",
+    "es-MX": "Área de la mesa de pícnic",
+    "fr": "Zone de la table de pique-nique",
+    "it": "Area Tavolo da picnic",
+    "ja": "ピクニックテーブルエリア",
+    "ko": "야외 식탁 지역",
+    "pt-BR": "Área da Mesa de Piquenique",
+    "zh-Hans": "野餐桌区域",
+    "zh-Hant": "野餐桌區"
+   }
+  },
+  "Picnic_Cooler": {
+   "area_id": 4,
+   "kind": "surface",
+   "names": {
+    "de": "Picknicktisch",
+    "en": "Picnic Table Area",
+    "es": "Zona de la mesa de pícnic",
+    "es-MX": "Área de la mesa de pícnic",
+    "fr": "Zone de la table de pique-nique",
+    "it": "Area Tavolo da picnic",
+    "ja": "ピクニックテーブルエリア",
+    "ko": "야외 식탁 지역",
+    "pt-BR": "Área da Mesa de Piquenique",
+    "zh-Hans": "野餐桌区域",
+    "zh-Hant": "野餐桌區"
+   }
+  },
+  "Picnic_FloodedOutpost": {
+   "area_id": 2,
+   "kind": "surface",
+   "names": {
+    "de": "Kiefernhügel",
+    "en": "Pine Hill Area",
+    "es": "Zona del pinar",
+    "es-MX": "Área de la colina de pinos",
+    "fr": "Zone de la colline aux pins",
+    "it": "Area Collina dei pini",
+    "ja": "松の丘エリア",
+    "ko": "소나무 언덕 지역",
+    "pt-BR": "Área da Colina dos Pinheiros",
+    "zh-Hans": "松林山区域",
+    "zh-Hant": "松丘區"
+   }
+  },
+  "PineHill_Area": {
+   "area_id": 2,
+   "kind": "surface",
+   "names": {
+    "de": "Kiefernhügel",
+    "en": "Pine Hill Area",
+    "es": "Zona del pinar",
+    "es-MX": "Área de la colina de pinos",
+    "fr": "Zone de la colline aux pins",
+    "it": "Area Collina dei pini",
+    "ja": "松の丘エリア",
+    "ko": "소나무 언덕 지역",
+    "pt-BR": "Área da Colina dos Pinheiros",
+    "zh-Hans": "松林山区域",
+    "zh-Hant": "松丘區"
+   }
+  },
+  "PineHill_Burrow": {
+   "area_id": 2,
+   "kind": "underground",
+   "names": {
+    "de": "Kiefernhügel",
+    "en": "Pine Hill Area",
+    "es": "Zona del pinar",
+    "es-MX": "Área de la colina de pinos",
+    "fr": "Zone de la colline aux pins",
+    "it": "Area Collina dei pini",
+    "ja": "松の丘エリア",
+    "ko": "소나무 언덕 지역",
+    "pt-BR": "Área da Colina dos Pinheiros",
+    "zh-Hans": "松林山区域",
+    "zh-Hant": "松丘區"
+   }
+  },
+  "PineHill_Hedge": {
+   "area_id": 2,
+   "kind": "surface",
+   "names": {
+    "de": "Kiefernhügel",
+    "en": "Pine Hill Area",
+    "es": "Zona del pinar",
+    "es-MX": "Área de la colina de pinos",
+    "fr": "Zone de la colline aux pins",
+    "it": "Area Collina dei pini",
+    "ja": "松の丘エリア",
+    "ko": "소나무 언덕 지역",
+    "pt-BR": "Área da Colina dos Pinheiros",
+    "zh-Hans": "松林山区域",
+    "zh-Hant": "松丘區"
+   }
+  },
+  "PineHill_Tarantula": {
+   "area_id": 2,
+   "kind": "surface",
+   "names": {
+    "de": "Kiefernhügel",
+    "en": "Pine Hill Area",
+    "es": "Zona del pinar",
+    "es-MX": "Área de la colina de pinos",
+    "fr": "Zone de la colline aux pins",
+    "it": "Area Collina dei pini",
+    "ja": "松の丘エリア",
+    "ko": "소나무 언덕 지역",
+    "pt-BR": "Área da Colina dos Pinheiros",
+    "zh-Hans": "松林山区域",
+    "zh-Hant": "松丘區"
+   }
+  },
+  "PineHill_Tarantula_Corridor": {
+   "area_id": 2,
+   "kind": "surface",
+   "names": {
+    "de": "Kiefernhügel",
+    "en": "Pine Hill Area",
+    "es": "Zona del pinar",
+    "es-MX": "Área de la colina de pinos",
+    "fr": "Zone de la colline aux pins",
+    "it": "Area Collina dei pini",
+    "ja": "松の丘エリア",
+    "ko": "소나무 언덕 지역",
+    "pt-BR": "Área da Colina dos Pinheiros",
+    "zh-Hans": "松林山区域",
+    "zh-Hant": "松丘區"
+   }
+  },
+  "Pond_Area": {
+   "area_id": 52,
+   "kind": "surface",
+   "names": {
+    "de": "Stinktier-Teich-Bereich",
+    "en": "Skunk Pond Area",
+    "es": "Zona del Estanque de la mofeta",
+    "es-MX": "Área del Estanque del Zorrillo",
+    "fr": "Zone de la mare aux putois",
+    "it": "Area Laghetto della Puzzola",
+    "ja": "スカンク池エリア",
+    "ko": "스컹크 연못 지역",
+    "pt-BR": "Área da Lagoa Fedida",
+    "zh-Hans": "臭鼬池塘区域",
+    "zh-Hant": "臭鼬池塘區"
+   }
+  },
+  "Pond_Lower": {
+   "area_id": 52,
+   "kind": "surface",
+   "names": {
+    "de": "Stinktier-Teich-Bereich",
+    "en": "Skunk Pond Area",
+    "es": "Zona del Estanque de la mofeta",
+    "es-MX": "Área del Estanque del Zorrillo",
+    "fr": "Zone de la mare aux putois",
+    "it": "Area Laghetto della Puzzola",
+    "ja": "スカンク池エリア",
+    "ko": "스컹크 연못 지역",
+    "pt-BR": "Área da Lagoa Fedida",
+    "zh-Hans": "臭鼬池塘区域",
+    "zh-Hant": "臭鼬池塘區"
+   }
+  },
+  "Pond_Upper": {
+   "area_id": 52,
+   "kind": "surface",
+   "names": {
+    "de": "Stinktier-Teich-Bereich",
+    "en": "Skunk Pond Area",
+    "es": "Zona del Estanque de la mofeta",
+    "es-MX": "Área del Estanque del Zorrillo",
+    "fr": "Zone de la mare aux putois",
+    "it": "Area Laghetto della Puzzola",
+    "ja": "スカンク池エリア",
+    "ko": "스컹크 연못 지역",
+    "pt-BR": "Área da Lagoa Fedida",
+    "zh-Hans": "臭鼬池塘区域",
+    "zh-Hant": "臭鼬池塘區"
+   }
+  },
+  "PumpkinPatch_Area": {
+   "area_id": 37,
+   "kind": "surface",
+   "names": {
+    "de": "Kürbisacker-Bereich",
+    "en": "Pumpkin Patch Area",
+    "es": "Zona del huerto de calabazas",
+    "es-MX": "Área de las calabazas",
+    "fr": "Zone du carré de citrouilles",
+    "it": "Area Campo di zucche",
+    "ja": "カボチャ畑エリア",
+    "ko": "호박밭 지역",
+    "pt-BR": "Área de Plantação de Abóboras",
+    "zh-Hans": "南瓜田区域",
+    "zh-Hant": "南瓜田區"
+   }
+  },
+  "PumpkinPatch_Burrow": {
+   "area_id": 37,
+   "kind": "underground",
+   "names": {
+    "de": "Kürbisacker-Bereich",
+    "en": "Pumpkin Patch Area",
+    "es": "Zona del huerto de calabazas",
+    "es-MX": "Área de las calabazas",
+    "fr": "Zone du carré de citrouilles",
+    "it": "Area Campo di zucche",
+    "ja": "カボチャ畑エリア",
+    "ko": "호박밭 지역",
+    "pt-BR": "Área de Plantação de Abóboras",
+    "zh-Hans": "南瓜田区域",
+    "zh-Hant": "南瓜田區"
+   }
+  },
+  "PumpkinPatch_Facility": {
+   "area_id": 48,
+   "kind": "lab",
+   "names": {
+    "de": "O.G.R.R.-Labore",
+    "en": "O.G.R.R. Labs",
+    "es": "Laboratorios O.G.R.O.",
+    "es-MX": "Laboratorio I.R.G.O.",
+    "fr": "Laboratoires O.G.R.R.",
+    "it": "Laboratori A.R.G.O.",
+    "ja": "O.G.R.R. ラボ",
+    "ko": "O.G.R.R. 연구소",
+    "pt-BR": "Laboratórios O.G.R.R.",
+    "zh-Hans": "O.G.R.R. 实验室",
+    "zh-Hant": "O.G.R.R. 實驗室"
+   }
+  },
+  "PumpkinPatch_Pumpkin": {
+   "area_id": 37,
+   "kind": "surface",
+   "names": {
+    "de": "Kürbisacker-Bereich",
+    "en": "Pumpkin Patch Area",
+    "es": "Zona del huerto de calabazas",
+    "es-MX": "Área de las calabazas",
+    "fr": "Zone du carré de citrouilles",
+    "it": "Area Campo di zucche",
+    "ja": "カボチャ畑エリア",
+    "ko": "호박밭 지역",
+    "pt-BR": "Área de Plantação de Abóboras",
+    "zh-Hans": "南瓜田区域",
+    "zh-Hant": "南瓜田區"
+   }
+  },
+  "PumpkinPatch_Scarecrow": {
+   "area_id": 64,
+   "kind": "surface",
+   "names": {
+    "de": "Vogelscheuche",
+    "en": "Scarecrow",
+    "es": "Espantapájaros",
+    "es-MX": "Espantapájaros",
+    "fr": "Épouvantail",
+    "it": "Spaventapasseri",
+    "ja": "かかし",
+    "ko": "허수아비",
+    "pt-BR": "Espantalho",
+    "zh-Hans": "稻草人",
+    "zh-Hant": "稻草人"
+   }
+  },
+  "Snackbar_Area": {
+   "area_id": 7,
+   "kind": "surface",
+   "names": {
+    "de": "Vordere Snackbar",
+    "en": "Snackbar Front Area",
+    "es": "Zona de la parte delantera del quiosco",
+    "es-MX": "Área frontal de la cafetería",
+    "fr": "Zone avant du snack",
+    "it": "Area Entrata Snack bar",
+    "ja": "スナックバーフロントエリア",
+    "ko": "스낵바 앞쪽 지역",
+    "pt-BR": "Área Frontal da Lanchonete",
+    "zh-Hans": "零食吧前台区域",
+    "zh-Hant": "販賣亭前區"
+   }
+  },
+  "Snackbar_Burrow": {
+   "area_id": 7,
+   "kind": "underground",
+   "names": {
+    "de": "Vordere Snackbar",
+    "en": "Snackbar Front Area",
+    "es": "Zona de la parte delantera del quiosco",
+    "es-MX": "Área frontal de la cafetería",
+    "fr": "Zone avant du snack",
+    "it": "Area Entrata Snack bar",
+    "ja": "スナックバーフロントエリア",
+    "ko": "스낵바 앞쪽 지역",
+    "pt-BR": "Área Frontal da Lanchonete",
+    "zh-Hans": "零食吧前台区域",
+    "zh-Hant": "販賣亭前區"
+   }
+  },
+  "Snackbar_OOF": {
+   "area_id": 29,
+   "kind": "lab",
+   "names": {
+    "de": "Ominent-Onboarding-Anlage",
+    "en": "Ominent Onboarding Facility",
+    "es": "Instalación de incorporación de Ominent",
+    "es-MX": "Centro de Ingresos de Ominent",
+    "fr": "Établissement d’accueil d'Ominent",
+    "it": "Impianto di reclutamento di Ominent",
+    "ja": "オミネント社研修施設",
+    "ko": "오미넌트 적응 훈련 시설",
+    "pt-BR": "Instalações de Integração da Ominent",
+    "zh-Hans": "奥美能入职培训设施",
+    "zh-Hant": "奧美能培訓設施"
+   }
+  },
+  "Snackbar_Under": {
+   "area_id": 7,
+   "kind": "underground",
+   "names": {
+    "de": "Vordere Snackbar",
+    "en": "Snackbar Front Area",
+    "es": "Zona de la parte delantera del quiosco",
+    "es-MX": "Área frontal de la cafetería",
+    "fr": "Zone avant du snack",
+    "it": "Area Entrata Snack bar",
+    "ja": "スナックバーフロントエリア",
+    "ko": "스낵바 앞쪽 지역",
+    "pt-BR": "Área Frontal da Lanchonete",
+    "zh-Hans": "零食吧前台区域",
+    "zh-Hant": "販賣亭前區"
+   }
+  },
+  "Statue_Area": {
+   "area_id": 6,
+   "kind": "surface",
+   "names": {
+    "de": "Statue",
+    "en": "Statue Area",
+    "es": "Zona de la estatua",
+    "es-MX": "Área de la estatua",
+    "fr": "Zone de la statue",
+    "it": "Area Statua",
+    "ja": "像エリア",
+    "ko": "동상 지역",
+    "pt-BR": "Área da Estátua",
+    "zh-Hans": "雕像区域",
+    "zh-Hant": "雕像區"
+   }
+  },
+  "Statue_Burrow": {
+   "area_id": 6,
+   "kind": "underground",
+   "names": {
+    "de": "Statue",
+    "en": "Statue Area",
+    "es": "Zona de la estatua",
+    "es-MX": "Área de la estatua",
+    "fr": "Zone de la statue",
+    "it": "Area Statua",
+    "ja": "像エリア",
+    "ko": "동상 지역",
+    "pt-BR": "Área da Estátua",
+    "zh-Hans": "雕像区域",
+    "zh-Hant": "雕像區"
+   }
+  },
+  "Statue_Checkpoint": {
+   "area_id": 33,
+   "kind": "lab",
+   "names": {
+    "de": "Statuen-Kontrollpunkt",
+    "en": "Statue Checkpoint",
+    "es": "Punto de control de la estatua",
+    "es-MX": "Punto de control de la estatua",
+    "fr": "Point de contrôle de la statue",
+    "it": "Checkpoint Statua",
+    "ja": "像チェックポイント",
+    "ko": "동상 거점",
+    "pt-BR": "Ponto de Controle da Estátua",
+    "zh-Hans": "雕像检查点",
+    "zh-Hant": "雕像檢查站"
+   }
+  },
+  "Statue_Hedge": {
+   "area_id": 6,
+   "kind": "surface",
+   "names": {
+    "de": "Statue",
+    "en": "Statue Area",
+    "es": "Zona de la estatua",
+    "es-MX": "Área de la estatua",
+    "fr": "Zone de la statue",
+    "it": "Area Statua",
+    "ja": "像エリア",
+    "ko": "동상 지역",
+    "pt-BR": "Área da Estátua",
+    "zh-Hans": "雕像区域",
+    "zh-Hant": "雕像區"
+   }
+  },
+  "Statue_Lab": {
+   "area_id": 30,
+   "kind": "lab",
+   "names": {
+    "de": "Netzwerkzentrum",
+    "en": "Network Center",
+    "es": "Centro de red",
+    "es-MX": "Centro de Redes",
+    "fr": "Centre réseau",
+    "it": "Centro Reti",
+    "ja": "ネットワークセンター",
+    "ko": "네트워크 센터",
+    "pt-BR": "Centro de Rede",
+    "zh-Hans": "网络中心",
+    "zh-Hant": "網路中心"
+   }
+  },
+  "Statue_Lab_NoMusic": {
+   "area_id": 30,
+   "kind": "lab",
+   "names": {
+    "de": "Netzwerkzentrum",
+    "en": "Network Center",
+    "es": "Centro de red",
+    "es-MX": "Centro de Redes",
+    "fr": "Centre réseau",
+    "it": "Centro Reti",
+    "ja": "ネットワークセンター",
+    "ko": "네트워크 센터",
+    "pt-BR": "Centro de Rede",
+    "zh-Hans": "网络中心",
+    "zh-Hant": "網路中心"
+   }
+  },
+  "Statue_Maze": {
+   "area_id": 6,
+   "kind": "lab",
+   "names": {
+    "de": "Statue",
+    "en": "Statue Area",
+    "es": "Zona de la estatua",
+    "es-MX": "Área de la estatua",
+    "fr": "Zone de la statue",
+    "it": "Area Statua",
+    "ja": "像エリア",
+    "ko": "동상 지역",
+    "pt-BR": "Área da Estátua",
+    "zh-Hans": "雕像区域",
+    "zh-Hant": "雕像區"
+   }
+  },
+  "Statue_RestStop": {
+   "area_id": 31,
+   "kind": "surface",
+   "names": {
+    "de": "Rastplatz",
+    "en": "Rest Stop",
+    "es": "Lugar de descanso",
+    "es-MX": "Parada de descanso",
+    "fr": "Aire de repos",
+    "it": "Area di sosta",
+    "ja": "休憩所",
+    "ko": "휴게소",
+    "pt-BR": "Parada de Descanso",
+    "zh-Hans": "休息站",
+    "zh-Hant": "休息站"
+   }
+  },
+  "Statue_Tubes": {
+   "area_id": 6,
+   "kind": "lab",
+   "names": {
+    "de": "Statue",
+    "en": "Statue Area",
+    "es": "Zona de la estatua",
+    "es-MX": "Área de la estatua",
+    "fr": "Zone de la statue",
+    "it": "Area Statua",
+    "ja": "像エリア",
+    "ko": "동상 지역",
+    "pt-BR": "Área da Estátua",
+    "zh-Hans": "雕像区域",
+    "zh-Hant": "雕像區"
+   }
+  },
+  "Statue_Underground": {
+   "area_id": 32,
+   "kind": "underground",
+   "names": {
+    "de": "Unterirdische Anlagen",
+    "en": "Underground Facilities",
+    "es": "Instalaciones subterráneas",
+    "es-MX": "Instalaciones subterráneas",
+    "fr": "Installations souterraines",
+    "it": "Impianti sotterranei",
+    "ja": "地下施設",
+    "ko": "지하 시설",
+    "pt-BR": "Instalações Subterrâneas",
+    "zh-Hans": "地下设施",
+    "zh-Hant": "地下設施"
+   }
+  },
+  "VeggieGarden_Area": {
+   "area_id": 35,
+   "kind": "surface",
+   "names": {
+    "de": "Gemüsegarten-Bereich",
+    "en": "Veggie Garden Area",
+    "es": "Zona del huerto vegetal",
+    "es-MX": "Área del huerto",
+    "fr": "Zone du potager",
+    "it": "Area Orto",
+    "ja": "ベジガーデンエリア",
+    "ko": "채소밭 지역",
+    "pt-BR": "Área de Horta",
+    "zh-Hans": "菜园区域",
+    "zh-Hant": "菜園區"
+   }
+  },
+  "VeggieGarden_Burrow": {
+   "area_id": 35,
+   "kind": "underground",
+   "names": {
+    "de": "Gemüsegarten-Bereich",
+    "en": "Veggie Garden Area",
+    "es": "Zona del huerto vegetal",
+    "es-MX": "Área del huerto",
+    "fr": "Zone du potager",
+    "it": "Area Orto",
+    "ja": "ベジガーデンエリア",
+    "ko": "채소밭 지역",
+    "pt-BR": "Área de Horta",
+    "zh-Hans": "菜园区域",
+    "zh-Hant": "菜園區"
+   }
+  },
+  "VeggieGarden_Burrow_NoMusic": {
+   "area_id": 35,
+   "kind": "underground",
+   "names": {
+    "de": "Gemüsegarten-Bereich",
+    "en": "Veggie Garden Area",
+    "es": "Zona del huerto vegetal",
+    "es-MX": "Área del huerto",
+    "fr": "Zone du potager",
+    "it": "Area Orto",
+    "ja": "ベジガーデンエリア",
+    "ko": "채소밭 지역",
+    "pt-BR": "Área de Horta",
+    "zh-Hans": "菜园区域",
+    "zh-Hant": "菜園區"
+   }
+  },
+  "VeggieGarden_Facility": {
+   "area_id": 47,
+   "kind": "lab",
+   "names": {
+    "de": "Süßwaren-Verarbeitungsanlage",
+    "en": "Candy Processing Facility",
+    "es": "Inst. procesado de caramelos",
+    "es-MX": "Centro de procesamiento de dulces",
+    "fr": "Usine de traitement des bonbons",
+    "it": "Fabbrica di caramelle",
+    "ja": "キャンディ加工施設",
+    "ko": "사탕 가공 시설",
+    "pt-BR": "Unidade de Processamento de Doces",
+    "zh-Hans": "糖果处理设施",
+    "zh-Hant": "糖果加工廠"
+   }
+  },
+  "VeggieGarden_Facility_Anthill": {
+   "area_id": 47,
+   "kind": "underground",
+   "names": {
+    "de": "Süßwaren-Verarbeitungsanlage",
+    "en": "Candy Processing Facility",
+    "es": "Inst. procesado de caramelos",
+    "es-MX": "Centro de procesamiento de dulces",
+    "fr": "Usine de traitement des bonbons",
+    "it": "Fabbrica di caramelle",
+    "ja": "キャンディ加工施設",
+    "ko": "사탕 가공 시설",
+    "pt-BR": "Unidade de Processamento de Doces",
+    "zh-Hans": "糖果处理设施",
+    "zh-Hant": "糖果加工廠"
+   }
+  },
+  "VeggieGarden_Facility_NoMusic": {
+   "area_id": 47,
+   "kind": "lab",
+   "names": {
+    "de": "Süßwaren-Verarbeitungsanlage",
+    "en": "Candy Processing Facility",
+    "es": "Inst. procesado de caramelos",
+    "es-MX": "Centro de procesamiento de dulces",
+    "fr": "Usine de traitement des bonbons",
+    "it": "Fabbrica di caramelle",
+    "ja": "キャンディ加工施設",
+    "ko": "사탕 가공 시설",
+    "pt-BR": "Unidade de Processamento de Doces",
+    "zh-Hans": "糖果处理设施",
+    "zh-Hant": "糖果加工廠"
+   }
+  }
+ }
+}
