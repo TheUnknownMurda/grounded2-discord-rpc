@@ -137,20 +137,21 @@ La limite restante est celle de Discord : une mise à jour toutes les **15 s** m
 
 ### Installation
 
-1. Installe **UE4SS_Grounded2** ([Nexus Mods, mod 52](https://www.nexusmods.com/grounded2/mods/52)) : extrais
-   `dwmapi.dll` et le dossier `ue4ss` **à côté de l'exe du jeu** :
-   - Game Pass : `E:\XboxGames\Grounded 2\Content\Augusta\Binaries\WinGDK\` (le dossier est inscriptible) ;
-   - Steam : `…\Grounded2\Augusta\Binaries\Win64\`.
-
-   Lance le jeu une fois : `ue4ss\UE4SS.log` doit contenir `Found GUObjectArray` et `Using engine version: 5.6`.
-2. Copie le mod :
+1. Installe le runtime UE4SS et le mod :
    ```bash
    python tools/install_mod.py
    ```
-   (`--game "E:\XboxGames\Grounded 2"` si le dossier n'est pas détecté, `--uninstall` pour le retirer). Le mod est
-   activé par son fichier `enabled.txt` ; `mods.txt` n'est pas modifié.
-3. Lance le jeu et entre dans un monde : `ue4ss\UE4SS.log` affiche `[Grounded2RPC] en partie · jour …` et
-   `live.json` apparaît. `python -m grounded2_rpc --dump` montre son contenu.
+   Le dépôt embarque **UE4SS_Grounded2 v1.0.4** ([Nexus Mods, mod 52](https://www.nexusmods.com/grounded2/mods/52),
+   build UE4SS 3.0.1 avec signatures pour le jeu, licence MIT — voir `mod/UE4SS_Grounded2/SOURCE.md`). Le script copie
+   `dwmapi.dll` + `ue4ss\` **à côté de l'exe du jeu** s'ils n'y sont pas encore (sans écraser une installation
+   existante ; `--reinstall-ue4ss` pour forcer), puis le mod dans `ue4ss\Mods\Grounded2RPC` (activé par son
+   `enabled.txt`). Options : `--game "E:\XboxGames\Grounded 2"` si le dossier n'est pas détecté, `--uninstall` pour
+   retirer le mod.
+   - Game Pass : `E:\XboxGames\Grounded 2\Content\Augusta\Binaries\WinGDK\` (le dossier est inscriptible) ;
+   - Steam : `…\Grounded2\Augusta\Binaries\Win64\`.
+2. Lance le jeu et entre dans un monde : `ue4ss\UE4SS.log` doit contenir `Found GUObjectArray`,
+   `Using engine version: 5.6`, puis `[Grounded2RPC] en partie · …`, et `live.json` apparaît.
+   `python -m grounded2_rpc --dump` montre son contenu.
 
 Au premier passage en partie, le mod écrit aussi `live_diag.txt` (valeurs des enums, propriétés et signatures des
 classes utilisées) : c'est le fichier à regarder si un champ manque dans `live.json` après une mise à jour du jeu —
@@ -212,6 +213,6 @@ adapte `saves.py` en conséquence. Ajoute aussi le vrai nom de l'exécutable Ste
 - `python -m grounded2_rpc --simulate` : envoie une presence réelle à Discord sans lancer le jeu (test visuel).
 - `python tools/dump_saves.py [--json]` : tous les champs du header, y compris ceux non affichés.
 - `python tools/extract_zones.py` : régénère `grounded2_rpc/data/zones.json` depuis les fichiers du jeu.
-- `python tools/install_mod.py [--uninstall]` : installe/retire le mod UE4SS dans le dossier du jeu.
+- `python tools/install_mod.py [--reinstall-ue4ss] [--uninstall]` : installe le runtime UE4SS embarqué (si absent) et le mod dans le dossier du jeu.
 - `python -m unittest discover -s tests` : tests unitaires (`pip install lupa` pour exécuter aussi le mod Lua dans un
   faux environnement UE4SS).
