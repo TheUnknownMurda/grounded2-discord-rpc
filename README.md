@@ -16,9 +16,13 @@ Size Don't Matter · Jour 16
 - Dans les menus : « Dans les menus · Dernière partie : … ».
 - Le chrono « écoulées » démarre au lancement du jeu ; la presence disparaît quand tu quittes.
 
-Aucune dépendance : Python standard uniquement. Rien n'est injecté dans le jeu, rien n'est lu en mémoire :
+Aucune dépendance : Python standard uniquement. Par défaut, rien n'est injecté dans le jeu, rien n'est lu en mémoire :
 l'outil lit les **sauvegardes** (que le jeu écrit toutes les 5 minutes en autosave, à chaque sauvegarde manuelle
 et à la déconnexion) et surveille le **processus** du jeu.
+
+En option, un petit **mod UE4SS** (dossier `mod/`) fournit la zone et l'horloge **en temps réel** (voir
+[Temps réel avec UE4SS](#temps-réel-avec-ue4ss-optionnel)) ; sans lui, ou s'il tombe en panne, l'outil retombe
+automatiquement sur les sauvegardes.
 
 ## Prérequis
 
@@ -81,6 +85,10 @@ en cours »** est activé, sinon rien ne s'affiche.
 | `clock_mode`                    | `"period"` | `period` (Matin 🌅 / Journée ☀️ / Soir 🌇 / Nuit 🌙), `exact` (`02:43`), `both`, `none`. |
 | `show_background_state`         | `false`    | Ajoute « ⏸ En arrière-plan » quand la fenêtre du jeu n'a pas le focus. |
 | `party_from_header`             | `"off"`    | Affiche « 2 sur 4 » à partir d'un champ du header (`flag3` ou `slot`) — champ **non confirmé**, voir plus bas. |
+| `live_enabled`                  | `true`     | Utiliser `live.json` écrit par le mod UE4SS quand il existe (voir [Temps réel](#temps-réel-avec-ue4ss-optionnel)). |
+| `live_paths`                    | …          | Emplacements possibles de `live.json` (`%LOCALAPPDATA%\Grounded2RPC\live.json` en premier). |
+| `live_stale_seconds`            | `30`       | Au-delà de cet âge, `live.json` est ignoré → repli sur les sauvegardes. |
+| `party_from_live`               | `true`     | Affiche « n sur 4 » d'après le nombre de joueurs vu par le mod (à partir de 2 joueurs). |
 | `process_names`                 | …          | Exécutables surveillés (`Grounded2-WinGDK-Shipping.exe` pour Xbox). |
 | `steam_save_globs`              | …          | Motifs de fichiers `.sav` Steam (expérimental). |
 | `images`                        | …          | Clés d'images (ou URLs) : `logo`, `menu`, `zone_surface`, `zone_underground`, `zone_outpost`, `zone_lab`. |
@@ -103,21 +111,78 @@ en cours »** est activé, sinon rien ne s'affiche.
    - une sauvegarde postérieure au lancement → « en partie » avec ses infos.
 5. Discord n'accepte qu'une mise à jour toutes les 15 s ; l'outil n'envoie que les changements.
 
-**Fraîcheur des infos** : la zone/le jour sont ceux de la **dernière sauvegarde** (autosave toutes les 5 min par
-défaut — réglable dans le jeu, plus une sauvegarde manuelle/rapide à tout moment). Ce n'est pas du temps réel, mais
-c'est fiable, sans risque pour le jeu et robuste aux mises à jour (le format du header n'a pas changé entre les
-versions 0.1.1 et 0.5.0 du jeu).
+**Fraîcheur des infos** : sans le mod, la zone/le jour sont ceux de la **dernière sauvegarde** (autosave toutes les
+5 min par défaut — réglable dans le jeu, plus une sauvegarde manuelle/rapide à tout moment). Ce n'est pas du temps
+réel, mais c'est fiable, sans risque pour le jeu et robuste aux mises à jour (le format du header n'a pas changé entre
+les versions 0.1.1 et 0.5.0 du jeu). Pour du temps réel, voir la section suivante.
+
+## Temps réel avec UE4SS (optionnel)
+
+[UE4SS](https://github.com/UE4SS-RE/RE-UE4SS) est un runtime de scripting Lua qui se charge dans le jeu via un DLL
+proxy (`dwmapi.dll`). Le mod `mod/Grounded2RPC` l'utilise en **lecture seule** : toutes les 2 s il interroge le
+`SurvivalGameState` du monde chargé (nom et GUID de la partie, nombre de joueurs) et ses composants
+(`CalendarComponent` : jour, heure, minute, période `ETimeOfDay` ; `ZoneManagerComponent` : zone ;
+`SurvivalModeManagerComponent` : difficulté `EGameDifficulty`, mode) et écrit `%LOCALAPPDATA%\Grounded2RPC\live.json` :
+
+```json
+{"in_world":true,"world_name":"Size Don't Matter","world_id":"…","day":17,"hour":11,"minute":19,
+ "time_of_day_name":"Day","zone_row":"Snackbar_Area","players":1,"difficulty_name":"Medium","ts":1789732536,…}
+```
+
+L'outil Python lit ce fichier en priorité ; s'il a plus de `live_stale_seconds` (jeu fermé, mod cassé par une mise à
+jour…), il revient aux sauvegardes sans rien changer d'autre. La presence affiche alors « en direct (mod UE4SS) » dans
+l'info-bulle et, à plusieurs, « n sur 4 » (groupe identifié par le GUID de la partie).
+
+La limite restante est celle de Discord : une mise à jour toutes les **15 s** maximum.
+
+### Installation
+
+1. Installe **UE4SS_Grounded2** ([Nexus Mods, mod 52](https://www.nexusmods.com/grounded2/mods/52)) : extrais
+   `dwmapi.dll` et le dossier `ue4ss` **à côté de l'exe du jeu** :
+   - Game Pass : `E:\XboxGames\Grounded 2\Content\Augusta\Binaries\WinGDK\` (le dossier est inscriptible) ;
+   - Steam : `…\Grounded2\Augusta\Binaries\Win64\`.
+
+   Lance le jeu une fois : `ue4ss\UE4SS.log` doit contenir `Found GUObjectArray` et `Using engine version: 5.6`.
+2. Copie le mod :
+   ```bash
+   python tools/install_mod.py
+   ```
+   (`--game "E:\XboxGames\Grounded 2"` si le dossier n'est pas détecté, `--uninstall` pour le retirer). Le mod est
+   activé par son fichier `enabled.txt` ; `mods.txt` n'est pas modifié.
+3. Lance le jeu et entre dans un monde : `ue4ss\UE4SS.log` affiche `[Grounded2RPC] en partie · jour …` et
+   `live.json` apparaît. `python -m grounded2_rpc --dump` montre son contenu.
+
+Au premier passage en partie, le mod écrit aussi `live_diag.txt` (valeurs des enums, propriétés et signatures des
+classes utilisées) : c'est le fichier à regarder si un champ manque dans `live.json` après une mise à jour du jeu —
+le mod n'appelle une fonction que si elle existe et n'attend aucun paramètre, et journalise sinon
+`fonction ignorée (paramètres requis)`. Les enums observés (jeu 0.310.8) : `ETimeOfDay` Morning/Day/Evening/Night,
+`EGameDifficulty` Mild/Medium/Whoa. Les seuils des périodes viennent du jeu (matin 6 h–10 h, journée 10 h–17 h,
+soir 17 h–20 h, nuit sinon) et servent aussi au mode sauvegardes.
+
+### Points d'attention
+
+- **Stabilité** : quelques joueurs signalent des lags puis un plantage après ~1 h avec UE4SS (`Maximum number of
+  UObjects exceeded`). L'auteur du paquet conseille `ConsoleEnabled = 0` et `RenderMode = ExternalThread` dans
+  `ue4ss\UE4SS-settings.ini`, et de désactiver les mods UE4SS inutiles dans `mods.txt`. Le mod Grounded2RPC ne crée
+  aucun objet et ne pose aucun hook.
+- **Mises à jour du jeu** : UE4SS peut cesser de fonctionner jusqu'à la mise à jour du paquet Nexus ; l'outil repasse
+  alors automatiquement sur les sauvegardes.
+- **Écrire un mod pour ce build d'UE4SS** : dans les callbacks `ForEachFunction` / `ForEachProperty` / `ForEachName`,
+  ne rien renvoyer pour continuer et `return true` pour arrêter — `return false` corrompt la pile et interrompt
+  l'itération au premier élément (`attempt to call a nil value`).
 
 ## Champs encore incertains (tu peux aider à les confirmer)
 
-Le header contient 4 octets `flags` (observés `(1, 0, 1, 2)` puis `(1, 0, 1, 1)`) et une chaîne `session_mode`
-(`""` ou `"Solo"`). Le 4ᵉ octet est soit la **difficulté** (1 = Moyen, 2 = Impitoyable ?), soit le **nombre de
-joueurs** présents. Pour trancher :
+Le header contient 4 octets `flags` (observés `(1, 0, 1, 2)` et `(1, 0, 1, 1)`) et une chaîne `session_mode`
+(`""` ou `"Solo"`). Ce n'est **pas** la difficulté : sur un même monde joué en `Medium` (valeur lue par le mod
+UE4SS), le 4ᵉ octet alterne entre 1 et 2 d'une autosave à l'autre. Le jeu expose une fonction
+`SaveGameHeaderData.RedirectGetLastSavePlayerCountType` (enum `ESaveGamePlayerCountType`) : c'est le candidat le plus
+probable. Pour trancher :
 
-1. joue quelques minutes **en solo** sur une difficulté donnée, attends une autosave, puis
-   `python tools/dump_saves.py` ;
-2. refais la même chose **à deux**, ou en changeant la difficulté ;
-3. compare la colonne `flags` : si elle suit le nombre de joueurs, mets `"party_from_header": "flag3"`.
+1. joue quelques minutes **en solo**, attends une autosave, puis `python tools/dump_saves.py` ;
+2. refais la même chose **à deux** ;
+3. compare la colonne `flags` : si elle suit le nombre de joueurs, mets `"party_from_header": "flag3"` (inutile avec
+   le mod UE4SS, qui donne le nombre de joueurs directement).
 
 ## Version Steam (expérimental)
 
@@ -147,4 +212,6 @@ adapte `saves.py` en conséquence. Ajoute aussi le vrai nom de l'exécutable Ste
 - `python -m grounded2_rpc --simulate` : envoie une presence réelle à Discord sans lancer le jeu (test visuel).
 - `python tools/dump_saves.py [--json]` : tous les champs du header, y compris ceux non affichés.
 - `python tools/extract_zones.py` : régénère `grounded2_rpc/data/zones.json` depuis les fichiers du jeu.
-- `python -m unittest discover -s tests` : tests unitaires.
+- `python tools/install_mod.py [--uninstall]` : installe/retire le mod UE4SS dans le dossier du jeu.
+- `python -m unittest discover -s tests` : tests unitaires (`pip install lupa` pour exécuter aussi le mod Lua dans un
+  faux environnement UE4SS).

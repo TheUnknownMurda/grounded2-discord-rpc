@@ -7,6 +7,9 @@
   "clock_mode": "period",
   "show_background_state": false,
   "party_from_header": "off",
+  "live_enabled": true,
+  "live_stale_seconds": 30,
+  "party_from_live": true,
   "images": {
     "logo": "grounded2",
     "menu": "grounded2",

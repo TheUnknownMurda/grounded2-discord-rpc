@@ -24,6 +24,16 @@ DEFAULTS: dict = {
     "show_background_state": False,
     # Taille de groupe affichée (« 2 sur 4 ») : "off", "flag3" ou "slot" (voir README, à valider).
     "party_from_header": "off",
+    # Source temps réel (mod UE4SS, dossier mod/) : fichier live.json écrit par le mod.
+    "live_enabled": True,
+    "live_paths": [
+        "%LOCALAPPDATA%/Grounded2RPC/live.json",
+        "%LOCALAPPDATA%/Packages/Microsoft.OE-Augusta_8wekyb3d8bbwe/LocalCache/Local/Grounded2RPC/live.json",
+    ],
+    # Au-delà de cet âge (secondes), live.json est ignoré et on retombe sur les sauvegardes.
+    "live_stale_seconds": 30,
+    # Afficher « n sur 4 » d'après le nombre de joueurs vu par le mod (à partir de 2 joueurs).
+    "party_from_live": True,
     # Noms d'exécutables à surveiller.
     "process_names": ["Grounded2-WinGDK-Shipping.exe", "Grounded2-Win64-Shipping.exe"],
     # Dossiers de sauvegardes Steam (expérimental, motifs glob).

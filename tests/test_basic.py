@@ -12,6 +12,7 @@ from datetime import datetime, timezone
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 from grounded2_rpc.game import GameProcess               # noqa: E402
+from grounded2_rpc.live import LiveError, LiveReader, parse_live  # noqa: E402
 from grounded2_rpc.presence import build_presence        # noqa: E402
 from grounded2_rpc.save_header import HeaderError, parse_header  # noqa: E402
 from grounded2_rpc.saves import SaveInfo                 # noqa: E402
@@ -97,6 +98,92 @@ class PresenceTests(unittest.TestCase):
         st = build_presence(cfg, "en", proc, [fresh], now=now)
         self.assertEqual(st.activity["details"], "Day 16")
         self.assertIn("02:43", st.activity["state"])
+
+
+class LiveTests(unittest.TestCase):
+    def test_parse(self):
+        live = parse_live('{"ts": 1700000000, "in_world": true, "day": 16, "hour": 2, "minute": 43, "zone_row": "Outpost_Snackbar", "players": 3, "host": true, "mod": "1.0"}')
+        self.assertTrue(live.complete)
+        self.assertEqual(live.clock(), "02:43")
+        self.assertEqual((live.players, live.host, live.mod_version), (3, True, "1.0"))
+        self.assertFalse(parse_live('{"ts": 1, "in_world": true, "day": 3}').complete)
+        with self.assertRaises(LiveError):
+            parse_live('{"in_world": true}')
+        with self.assertRaises(LiveError):
+            parse_live('{"ts": 1, ')
+
+    def test_reader_stale_and_missing(self):
+        import tempfile
+        now = time.time()
+        with tempfile.TemporaryDirectory() as tmp:
+            path = os.path.join(tmp, "live.json")
+            reader = LiveReader([path], stale_seconds=30)
+            self.assertIsNone(reader.read(now))
+            with open(path, "w", encoding="utf-8") as fh:
+                fh.write('{"ts": %d, "in_world": true, "day": 1, "hour": 8, "minute": 0}' % int(now))
+            self.assertIsNotNone(reader.read(now))
+            os.remove(path)
+            self.assertIsNotNone(reader.read(now + 2))        # réécriture en cours : on garde l'ancienne valeur
+            self.assertIsNone(reader.read(now + 10))          # disparu pour de bon
+            with open(path, "w", encoding="utf-8") as fh:
+                fh.write('{"ts": %d, "in_world": true, "day": 1, "hour": 8, "minute": 0}' % int(now - 31))
+            self.assertIsNone(reader.read(now))               # périmé (mod arrêté, jeu figé…)
+
+
+class LivePresenceTests(unittest.TestCase):
+    def _save(self, when):
+        return SaveInfo("k", "xbox", parse_header(make_header(when=when)), "", 0)
+
+    def test_live_has_priority_over_saves(self):
+        now = time.time()
+        proc = GameProcess(1, "x.exe", now - 30)
+        old = self._save(datetime.fromtimestamp(now - 3600, tz=timezone.utc))
+        live = parse_live('{"ts": %d, "in_world": true, "day": 21, "hour": 19, "minute": 5, "zone_row": "Picnic_Area", "players": 3}' % int(now))
+        st = build_presence(CONFIG, "fr", proc, [old], now=now, live=live)
+        self.assertEqual(st.status, "live")
+        self.assertEqual(st.activity["details"], "Mon monde · Jour 21")     # nom du monde : dernière sauvegarde
+        self.assertIn("Soir", st.activity["state"])
+        self.assertIn("pique-nique", st.activity["state"])
+        self.assertIn("en direct", st.activity["assets"]["large_text"])
+        self.assertIn("dernière sauvegarde", st.activity["assets"]["large_text"])
+        self.assertEqual(st.activity["party"], {"id": "00000001000000020000000300000004", "size": [3, 4]})
+
+    def test_live_world_name_guid_and_period_from_game(self):
+        now = time.time()
+        proc = GameProcess(1, "x.exe", now - 30)
+        old = self._save(datetime.fromtimestamp(now - 3600, tz=timezone.utc))
+        # 09:30 : Matin d'après l'enum du jeu (MorningEndHour = 10), et nom/guid du mod prioritaires
+        live = parse_live('{"ts": %d, "in_world": true, "day": 3, "hour": 9, "minute": 30, "time_of_day_name": "Morning", '
+                          '"world_name": "Nouveau monde", "world_id": "AABBCCDD00000000000000000000FFFF", "players": 2}' % int(now))
+        st = build_presence(CONFIG, "fr", proc, [old], now=now, live=live)
+        self.assertEqual(st.activity["details"], "Nouveau monde · Jour 3")
+        self.assertIn("Matin", st.activity["state"])
+        self.assertEqual(st.activity["party"]["id"], "aabbccdd00000000000000000000ffff")
+        # sans nom d'enum : d'après l'heure (seuils du jeu : 10 h = Journée)
+        live = parse_live('{"ts": %d, "in_world": true, "day": 3, "hour": 10, "minute": 0}' % int(now))
+        st = build_presence(CONFIG, "fr", proc, [old], now=now, live=live)
+        self.assertIn("Journée", st.activity["state"])
+
+    def test_live_menu_and_no_saves(self):
+        now = time.time()
+        proc = GameProcess(1, "x.exe", now - 3600)
+        old = self._save(datetime.fromtimestamp(now - 7200, tz=timezone.utc))
+        menu = parse_live('{"ts": %d, "in_world": false}' % int(now))
+        st = build_presence(CONFIG, "fr", proc, [old], now=now, live=menu)
+        self.assertEqual(st.status, "menu")                       # pas de « partie supposée » quand le mod dit menu
+        live = parse_live('{"ts": %d, "in_world": true, "day": 1, "hour": 8, "minute": 0, "players": 1}' % int(now))
+        st = build_presence(CONFIG, "en", proc, [], now=now, live=live)
+        self.assertEqual(st.activity["details"], "Day 1")
+        self.assertNotIn("party", st.activity)
+        self.assertNotIn("last save", st.activity["assets"]["large_text"])
+
+    def test_live_incomplete_falls_back_to_saves(self):
+        now = time.time()
+        proc = GameProcess(1, "x.exe", now - 30)
+        fresh = self._save(datetime.fromtimestamp(now, tz=timezone.utc))
+        live = parse_live('{"ts": %d, "in_world": true}' % int(now))    # signatures inconnues : pas de jour/heure
+        st = build_presence(CONFIG, "fr", proc, [fresh], now=now, live=live)
+        self.assertEqual(st.status, "in_world")
 
 
 if __name__ == "__main__":

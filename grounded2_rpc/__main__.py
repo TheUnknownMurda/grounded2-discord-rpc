@@ -15,6 +15,7 @@ from . import __version__
 from .config import load_config
 from .discord_ipc import DiscordIPC, DiscordNotRunning
 from .game import GameProcess, find_game, installed_version, is_foreground, read_game_settings
+from .live import LiveReader
 from .presence import build_presence
 from .saves import SaveWatcher
 from .zones import language_from_setting
@@ -67,6 +68,10 @@ class App:
         self.dry_run = dry_run
         self.simulate = simulate
         self.watcher = SaveWatcher(steam_dirs=config.get("steam_save_globs") or [])
+        self.live: Optional[LiveReader] = None
+        if config.get("live_enabled", True):
+            self.live = LiveReader(config.get("live_paths") or None, float(config.get("live_stale_seconds", 30)))
+        self.live_active: Optional[bool] = None
         self.ipc: Optional[DiscordIPC] = None if dry_run else DiscordIPC(config["client_id"])
         self.last_sent: Optional[dict] = None
         self.last_sent_at = 0.0
@@ -81,6 +86,8 @@ class App:
         self._simulated: Optional[GameProcess] = None
         log.info("Grounded 2 Rich Presence %s · langue %s · autosave toutes les %s min",
                  __version__, self.lang, (self.settings.get("AutosaveInterval") or "?").split(".")[0])
+        if self.live is not None:
+            log.info("source temps réel (mod UE4SS) : %s", self.live.path)
 
     # ------------------------------------------------------------- Discord
     def _ensure_connected(self) -> bool:
@@ -139,7 +146,15 @@ class App:
                 self._send(None)
             return
         foreground = True if self.simulate else is_foreground(process.pid)
-        state = build_presence(self.config, self.lang, process, saves, foreground=foreground)
+        live = self.live.read() if self.live is not None else None
+        active = live is not None
+        if active != self.live_active:
+            self.live_active = active
+            if active:
+                log.info("mod temps réel détecté (v%s) : zone et horloge en direct", live.mod_version or "?")
+            elif self.live is not None:
+                log.info("mod temps réel absent ou muet : repli sur les sauvegardes")
+        state = build_presence(self.config, self.lang, process, saves, foreground=foreground, live=live)
         activity = state.activity
         if activity == self.last_sent:
             return
@@ -187,6 +202,12 @@ def main(argv: Optional[list] = None) -> int:
             h = save.header
             print(f"{h.save_time.astimezone():%Y-%m-%d %H:%M}  {h.save_type_name:9} {h.world_name!r:24} jour {h.day:3} {h.clock()}  "
                   f"{h.zone_row:32} v{h.game_version:8} flags={h.flags} mode={h.session_mode!r}  [{save.key.split(':')[-1]}]")
+        reader = LiveReader(config.get("live_paths") or None, float(config.get("live_stale_seconds", 30)))
+        live = reader.read()
+        if live is None:
+            print(f"live.json : absent ou périmé ({reader.path})")
+        else:
+            print(f"live.json : il y a {live.age():.0f} s · {json.dumps(live.raw, ensure_ascii=False)}")
         return 0
 
     client_id = str(config.get("client_id") or "").strip()
