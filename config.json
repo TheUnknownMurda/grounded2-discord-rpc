@@ -1,0 +1,19 @@
+{
+  "client_id": "1550446901856571442",
+  "language": "auto",
+  "poll_interval_seconds": 5,
+  "assume_in_world_after_minutes": 2,
+  "show_world_name": true,
+  "clock_mode": "period",
+  "show_background_state": false,
+  "party_from_header": "off",
+  "images": {
+    "logo": "grounded2",
+    "menu": "grounded2",
+    "zone_surface": "zone_surface",
+    "zone_underground": "zone_underground",
+    "zone_outpost": "zone_outpost",
+    "zone_lab": "zone_lab"
+  },
+  "buttons": []
+}
