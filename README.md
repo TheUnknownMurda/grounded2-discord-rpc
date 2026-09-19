@@ -92,7 +92,7 @@ en cours »** est activé, sinon rien ne s'affiche.
 | `process_names`                 | …          | Exécutables surveillés (`Grounded2-WinGDK-Shipping.exe` pour Xbox). |
 | `steam_save_globs`              | …          | Motifs de fichiers `.sav` Steam (expérimental). |
 | `images`                        | …          | Clés d'images (ou URLs) : `logo`, `menu`, `zone_surface`, `zone_underground`, `zone_outpost`, `zone_lab`. |
-| `buttons`                       | `[]`       | Jusqu'à 2 boutons `{"label": "…", "url": "https://…"}` (visibles par les autres, pas par toi). |
+| `buttons`                       | bouton « Get This Presence » → ce dépôt | Jusqu'à 2 boutons `{"label": "…", "url": "https://…"}` (visibles par les autres, pas par toi). `[]` pour aucun. |
 
 ## Comment ça marche
 

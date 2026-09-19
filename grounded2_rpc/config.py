@@ -47,8 +47,8 @@ DEFAULTS: dict = {
         "zone_outpost": "zone_outpost",
         "zone_lab": "zone_lab",
     },
-    # Jusqu'à 2 boutons : [{"label": "…", "url": "https://…"}]
-    "buttons": [],
+    # Jusqu'à 2 boutons : [{"label": "…", "url": "https://…"}] (visibles par les autres, pas par toi).
+    "buttons": [{"label": "Get This Presence", "url": "https://github.com/TheUnknownMurda/grounded2-discord-rpc"}],
     # Texte de version affiché dans l'info-bulle du menu (auto si vide).
     "game_version_label": "",
 }
